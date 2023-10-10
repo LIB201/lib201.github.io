@@ -6,9 +6,11 @@ format:
   toc: true 
 --- 
 
-# Overview
+## Overview
+The Network Analysis project is a way for you to explore the relationships in the letters - who wrote to whom, how often, and to what degree. The idea is not necessarily to submit a clean, fully scrubbed network, but one that highlights a few relationships and the significance that may bring to the network as a whole.
 
 ## Due
+Date TBA
 
 ## Submit
 Follow [Network Analysis lessons 3 - 4](/Modules/network-analysis.md) for a detailed step-by-step for how to model your data for a network analysis. Submit a document with an image file (or several image files) of your network analysis in Palladio, and include an explanation (about 1-2 pages) of what's going on in the graph, which should give:

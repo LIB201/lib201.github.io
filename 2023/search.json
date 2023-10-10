@@ -487,7 +487,7 @@
     "href": "assignments/reflection.html",
     "title": "Final Reflection Rubric",
     "section": "",
-    "text": "You may share these with me in draft form for comments and feedback before the due date.\n\n\n\nThroughout this class, we have focused on how to use different kinds of digital research to interact with archival documents. We have been balancing the line between automating processes with computers, and using computers to do processes manually. Think about how these processes you’ve employed throughout the semester have done this – transcribing texts with an algorithm AND manually, reading letters individually and having a computer read them all, hypothesizing an output of a text analysis mechanism, sorting and classifying data into different groups, finding and creating knowledge and sharing it in an online folder, etc. You have used the computer to process large amounts of data, and for what?\nIn your reflection essay, think about your experiences in each module of the class, and discuss what is gained through these processes, and possibly, what is lost. How do these processes help your research? How do they impede it?\nFinally, what do all of these processes and outputs mean in your interactions with the Smith Papers Collection? What did these digital and manual processes reveal to you about these 100-year-old conversations?\n\n\n\n\nDiscuss the skills, processes, and tools you had to incorporate for each mini-project\nDiscuss the effect these processes had on your projects (feel free to reference the course readings to help make this argument), and what these digital artifacts allow (or disallow) you to do\nDiscuss the impact these digital processes had on your engagement with the archival collection\n\n\n\n\n• 3-4 pages (1200-1500 words) • Include 2-5 links to (or images of) artifacts you reference (e.g. visualizations from mini-projects, cleaning configurations, transcription errors, etc.) • Submit as a word document to Canvas"
+    "text": "Throughout this class, we have focused on how to use different kinds of digital research to interact with archival documents. We have been balancing the line between automating processes with computers, and using computers to do processes manually. Think about how these processes you’ve employed throughout the semester have done this – transcribing texts with an algorithm AND manually, reading letters individually and having a computer read them all, hypothesizing an output of a text analysis mechanism, sorting and classifying data into different groups, finding and creating knowledge and sharing it in an online folder, etc. You have used the computer to process large amounts of data, and for what?\nIn your reflection essay, think about your experiences in each module of the class, and discuss what is gained through these processes, and possibly, what is lost. How do these processes help your research? How do they impede it?\nFinally, what do all of these processes and outputs mean in your interactions with the Smith Papers Collection? What did these digital and manual processes reveal to you about these 100-year-old conversations?"
   },
   {
     "objectID": "assignments/reflection.html#due-51-in-lieu-of-final-exam",
@@ -507,43 +507,43 @@
     "objectID": "assignments/reflection.html#to-sum-up",
     "href": "assignments/reflection.html#to-sum-up",
     "title": "Final Reflection Rubric",
-    "section": "",
-    "text": "Discuss the skills, processes, and tools you had to incorporate for each mini-project\nDiscuss the effect these processes had on your projects (feel free to reference the course readings to help make this argument), and what these digital artifacts allow (or disallow) you to do\nDiscuss the impact these digital processes had on your engagement with the archival collection"
+    "section": "To sum up:",
+    "text": "To sum up:\n\nDiscuss the skills, processes, and tools you had to incorporate for each mini-project\nDiscuss the effect these processes had on your projects (feel free to reference the course readings to help make this argument), and what these digital artifacts allow (or disallow) you to do\nDiscuss the impact these digital processes had on your engagement with the archival collection"
   },
   {
     "objectID": "assignments/reflection.html#paper-requirements",
     "href": "assignments/reflection.html#paper-requirements",
     "title": "Final Reflection Rubric",
-    "section": "",
-    "text": "• 3-4 pages (1200-1500 words) • Include 2-5 links to (or images of) artifacts you reference (e.g. visualizations from mini-projects, cleaning configurations, transcription errors, etc.) • Submit as a word document to Canvas"
+    "section": "Paper requirements:",
+    "text": "Paper requirements:\n\n3-4 pages (1200-1500 words)\nInclude 2-5 links to (or images of) artifacts you reference (e.g. visualizations from mini-projects, cleaning configurations, transcription errors, etc.)\nSubmit as a word document to Canvas"
   },
   {
     "objectID": "assignments/NA.html",
     "href": "assignments/NA.html",
     "title": "Network Analysis Rubric",
     "section": "",
-    "text": "Follow Network Analysis lessons 3 - 4 for a detailed step-by-step for how to model your data for a network analysis. Submit a document with an image file (or several image files) of your network analysis in Palladio, and include an explanation (about 1-2 pages) of what’s going on in the graph, which should give:\n\na brief introduction to the collection of letters, or who/what the network represents, and\na description what the nodes and edges represent within the greater network of the collection of letters.\nany insights you can provide on relationships or nodes to highlight (i.e. notes on who might have the highest degree centrality and why, or which node might serve as a bridge, etc.). If you need to zoom in on parts of the image to do this, include a zoomed-in screenshot of part of the network so that your explanation has a visual aid.\n\n\n\n\nNetwork Analyses that get full credit will be evaluated based on the explanation, the dataset, and the visualization itself.\n\n\n\nAdequately explains how the dataset was modeled and the methods of cleaning data, and links to the original data set\nMakes inferences about the patterns and anomalies in the visualization (e.g. who were the influential players, what the outlying subgroups mean, etc.)\n\n\n\n\n\nis as free from duplicates as possible (keeping “Against Cleaning” in mind!)\nAvoids copy and paste errors. Work done together maintains the “tidiness” of the dataset.\n\n\n\n\n\nContains an images of the network that are clearly visible and demonstrate the analysis from the paragraph\nUses edges and node sizing to show impact of different people"
+    "text": "The Network Analysis project is a way for you to explore the relationships in the letters - who wrote to whom, how often, and to what degree. The idea is not necessarily to submit a clean, fully scrubbed network, but one that highlights a few relationships and the significance that may bring to the network as a whole."
   },
   {
     "objectID": "assignments/NA.html#submit",
     "href": "assignments/NA.html#submit",
     "title": "Network Analysis Rubric",
-    "section": "",
-    "text": "Follow Network Analysis lessons 3 - 4 for a detailed step-by-step for how to model your data for a network analysis. Submit a document with an image file (or several image files) of your network analysis in Palladio, and include an explanation (about 1-2 pages) of what’s going on in the graph, which should give:\n\na brief introduction to the collection of letters, or who/what the network represents, and\na description what the nodes and edges represent within the greater network of the collection of letters.\nany insights you can provide on relationships or nodes to highlight (i.e. notes on who might have the highest degree centrality and why, or which node might serve as a bridge, etc.). If you need to zoom in on parts of the image to do this, include a zoomed-in screenshot of part of the network so that your explanation has a visual aid."
+    "section": "Submit",
+    "text": "Submit\nFollow Network Analysis lessons 3 - 4 for a detailed step-by-step for how to model your data for a network analysis. Submit a document with an image file (or several image files) of your network analysis in Palladio, and include an explanation (about 1-2 pages) of what’s going on in the graph, which should give:\n\na brief introduction to the collection of letters, or who/what the network represents, and\na description what the nodes and edges represent within the greater network of the collection of letters.\nany insights you can provide on relationships or nodes to highlight (i.e. notes on who might have the highest degree centrality and why, or which node might serve as a bridge, etc.). If you need to zoom in on parts of the image to do this, include a zoomed-in screenshot of part of the network so that your explanation has a visual aid."
   },
   {
     "objectID": "assignments/NA.html#rubric",
     "href": "assignments/NA.html#rubric",
     "title": "Network Analysis Rubric",
-    "section": "",
-    "text": "Network Analyses that get full credit will be evaluated based on the explanation, the dataset, and the visualization itself.\n\n\n\nAdequately explains how the dataset was modeled and the methods of cleaning data, and links to the original data set\nMakes inferences about the patterns and anomalies in the visualization (e.g. who were the influential players, what the outlying subgroups mean, etc.)\n\n\n\n\n\nis as free from duplicates as possible (keeping “Against Cleaning” in mind!)\nAvoids copy and paste errors. Work done together maintains the “tidiness” of the dataset.\n\n\n\n\n\nContains an images of the network that are clearly visible and demonstrate the analysis from the paragraph\nUses edges and node sizing to show impact of different people"
+    "section": "Rubric",
+    "text": "Rubric\nNetwork Analyses that get full credit will be evaluated based on the explanation, the dataset, and the visualization itself.\n\nThe explanation:\n\nAdequately explains how the dataset was modeled and the methods of cleaning data, and links to the original data set\nMakes inferences about the patterns and anomalies in the visualization (e.g. who were the influential players, what the outlying subgroups mean, etc.)\n\n\n\nThe dataset:\n\nis as free from duplicates as possible (keeping “Against Cleaning” in mind!)\nAvoids copy and paste errors. Work done together maintains the “tidiness” of the dataset.\n\n\n\nThe Visualization:\n\nContains an images of the network that are clearly visible and demonstrate the analysis from the paragraph\nUses edges and node sizing to show impact of different people"
   },
   {
     "objectID": "assignments/dig-prep.html",
     "href": "assignments/dig-prep.html",
     "title": "Digital Prep Rubric",
     "section": "",
-    "text": "Your work with individually assigned letters from the Smith Papers Collection will be the basis for this assigment. You will submit this work across 3 different submissions: - Metadata (worth 50 points) - Transcriptions (worth 100 points) - Tags (worth 50 points)\n\n\nFrom our Google Sheet, copy and paste the full metadata for the letters you were transcribing into a blank spreadsheet, and submit the .xlsx file to Canvas. Metadata will be checked for fullness (all the fields are filled in) and consistency (they are all formatted according to the guidelines).\nMetadata that receives full credit will: - complete all metadata fields, following Smith Paper Guidelines formatting consistently - use Library of Congress subject headings that are relevant and appropriate - Consider and note harmful content in the letters within appropriate fields\n\n\n\nExport and upload the .txt files of your assigned transcriptions. The file names should follow our guidelines (mcj-dp018….txt), and the transcriptions should be complete and thorough, representing the letters as faithfully as possible (see Transcribing lesson 1!\nTranscriptions that receive full credit will: - Maintain structural integrity of the original document through Transkribus’ layout analysis tool - Transcribe the letters fully and as closely to the original letter as possible, keeping original spelling, markings (where appropriate), punctuation, etc.\n\n\n\nUpload the metadata tags (e.g. person, place, organization, etc.) you created for each letter you transcribed. The exported tags will be in an .xls or .xslx format. They should have multiple tabs per sheet for each tag named (e.g. person, place, organization, etc. Each tag category has a separate tab), and there should be an “overview” tab for all tags. It will look something like this:\n\n\n\nScreenshot of example tags exported from Transkribus and displayed in Google Sheets\n\n\nTags that receive full credit will: - tag all words as explained in our Tag Definitions list."
+    "text": "Your work with individually assigned letters from the Smith Papers Collection will be the basis for this assigment. You will submit this work across 3 different submissions: - Metadata (worth 50 points) - Transcriptions (worth 100 points) - Tags (worth 50 points)\n\n\nFrom our Google Sheet, copy and paste the full metadata for the letters you were transcribing into a blank spreadsheet, and submit the .xlsx file to Canvas. Metadata will be checked for fullness (all the fields are filled in) and consistency (they are all formatted according to the guidelines).\nMetadata that receives full credit will: - complete all metadata fields, following Smith Paper Guidelines formatting consistently - use Library of Congress subject headings that are relevant and appropriate - Consider and note harmful content in the letters within appropriate fields\n\n\n\nExport and upload the .txt files of your assigned transcriptions. The file names should follow our guidelines (mcj-dp018….txt), and the transcriptions should be complete and thorough, representing the letters as faithfully as possible (see Transcribing lesson 1!\nTranscriptions that receive full credit will: - Maintain structural integrity of the original document through Transkribus’ layout analysis tool - Transcribe the letters fully and as closely to the original letter as possible, keeping original spelling, markings (where appropriate), punctuation, etc.\n\n\n\nUpload the metadata tags (e.g. person, place, organization, etc.) you created for each letter you transcribed. The exported tags will be in an .xls or .xslx format. They should have multiple tabs per sheet for each tag named (e.g. person, place, organization, etc. Each tag category has a separate tab), and there should be an “overview” tab for all tags.\nTags that receive full credit will: - tag all words as explained in our Tag Definitions list."
   },
   {
     "objectID": "assignments/dig-prep.html#metadata",
@@ -592,35 +592,35 @@
     "href": "assignments/narrative-rubric.html",
     "title": "Narrative Portfolio Rubric",
     "section": "",
-    "text": "Overview\nYou will create a digital exhibit that puts the research we’ve collected and the artifacts we’ve created in class into one project that tells a story about the Smith Papers Collection. You are synthesizing the items in the collection with what we’ve learned so far, and creating a digital story about it.\n\n\nDue:\n\n\nRubric\nSuccessful narrative projects will be evaluated on the following criteria: - Shows improvements on mini-projects from original submission - Uses narrative elements (text, links, and images) to weave together the mini-projects - Uses secondary sources to strengthen the validity of the argument within the narrative and mini-projects - Shares evidence of the digital scholarship (e.g. stop words lists, raw/clean data, explanation of process, etc.) as often and as necessary as possible - Provides ample text and explanation for all required sections - Uses markdown (and/or HTML if applicable) language to create a structured and dynamic digital exhibit"
+    "text": "You will create a digital exhibit that puts the research we’ve collected and the artifacts we’ve created in class into one project that tells a story about the Smith Papers Collection. You are synthesizing the items in the collection with what we’ve learned so far, and creating a digital story about it."
   },
   {
     "objectID": "assignments/TA.html",
     "href": "assignments/TA.html",
     "title": "Text Analysis Rubric",
     "section": "",
-    "text": "The Text Analysis assignment is a way for you to engage with the content (or, the text!) of the collection. The point of this assignment is not to prove anything through text analysis tools, but to ask questions and demonstrate the process you undertook to address those questions using different tools. Think of your text anlysis assignment as a scientific experiment that uses words as its test subject!\n\n\n\n\n\nText Analyses that get full credit will be evaluated based on 4 sections of the assignment: the research question, the methods, the results, and further research.\n\n\n\nClearly defines the purpose of the text analysis in the form of a research question\nCites at least 2 secondary sources to establish a contextual foundation for the question\nCites at least 3 primary sources, using them as evidence to reinforce claims made as a result of the text analysis\n\n\n\n\n\nClearly define the parameters for inclusion and exclusion of the content set\nExplain the choice of 2 text analysis methods with sound justifications\nProvide detailed cleaning methods for the content set\n\n\n\n\n\n\nDemonstrate the experiment’s results with accessibly visual images from text analysis tools\nProvide insight and interpretation into the results of each analysis tool\n\n\n\n\n\nClearly defines the limits of the study and how they affected the current results\nOutlines a concrete path for a future study as a result of the current study’s limitations"
+    "text": "The Text Analysis assignment is a way for you to engage with the content (or, the text!) of the collection. The point of this assignment is not to prove anything through text analysis tools, but to ask questions and demonstrate the process you undertook to address those questions using different tools. Think of your text anlysis assignment as a scientific experiment that uses words as its test subject!"
   },
   {
     "objectID": "assignments/TA.html#rubric",
     "href": "assignments/TA.html#rubric",
     "title": "Text Analysis Rubric",
-    "section": "",
-    "text": "Text Analyses that get full credit will be evaluated based on 4 sections of the assignment: the research question, the methods, the results, and further research.\n\n\n\nClearly defines the purpose of the text analysis in the form of a research question\nCites at least 2 secondary sources to establish a contextual foundation for the question\nCites at least 3 primary sources, using them as evidence to reinforce claims made as a result of the text analysis\n\n\n\n\n\nClearly define the parameters for inclusion and exclusion of the content set\nExplain the choice of 2 text analysis methods with sound justifications\nProvide detailed cleaning methods for the content set"
+    "section": "Rubric",
+    "text": "Rubric\nText Analyses that get full credit will be evaluated based on 4 sections of the assignment: the research question, the methods, the results, and further research.\n\nThe Research Question:\n\nClearly defines the purpose of the text analysis in the form of a research question\nCites at least 2 secondary sources to establish a contextual foundation for the question\nCites at least 3 primary sources, using them as evidence to reinforce claims made as a result of the text analysis\n\n\n\nThe Methods:\n\nClearly define the parameters for inclusion and exclusion of the content set\nExplain the choice of 2 text analysis methods with sound justifications\nProvide detailed cleaning methods for the content set"
   },
   {
     "objectID": "assignments/TA.html#the-results",
     "href": "assignments/TA.html#the-results",
     "title": "Text Analysis Rubric",
-    "section": "",
-    "text": "Demonstrate the experiment’s results with accessibly visual images from text analysis tools\nProvide insight and interpretation into the results of each analysis tool"
+    "section": "The Results:",
+    "text": "The Results:\n\nDemonstrate the experiment’s results with accessibly visual images from text analysis tools\nProvide insight and interpretation into the results of each analysis tool"
   },
   {
     "objectID": "assignments/TA.html#further-research",
     "href": "assignments/TA.html#further-research",
     "title": "Text Analysis Rubric",
-    "section": "",
-    "text": "Clearly defines the limits of the study and how they affected the current results\nOutlines a concrete path for a future study as a result of the current study’s limitations"
+    "section": "Further Research:",
+    "text": "Further Research:\n\nClearly defines the limits of the study and how they affected the current results\nOutlines a concrete path for a future study as a result of the current study’s limitations"
   },
   {
     "objectID": "Modules/Class 1.html#overview",
@@ -1033,6 +1033,90 @@
     "href": "assignments.html",
     "title": "Assignments",
     "section": "",
-    "text": "Assignments\nDigital Prep Assignment - Due - Submit Network Analysis Project - Due Map/Timeline Project - Due Text Analysis Project - Due Narrative Project - Due Reflection Assigment - Due"
+    "text": "Assignments\nDigital Prep Assignment - Due - Submit\nNetwork Analysis Project - Due - Submit\nMap/Timeline Project - Due - Submit\nText Analysis Project - Due - Submit\nNarrative Project - Due - Submit\nReflection Assigment - Due - Submit"
+  },
+  {
+    "objectID": "assignments/TA.html#overview",
+    "href": "assignments/TA.html#overview",
+    "title": "Text Analysis Rubric",
+    "section": "",
+    "text": "The Text Analysis assignment is a way for you to engage with the content (or, the text!) of the collection. The point of this assignment is not to prove anything through text analysis tools, but to ask questions and demonstrate the process you undertook to address those questions using different tools. Think of your text anlysis assignment as a scientific experiment that uses words as its test subject!"
+  },
+  {
+    "objectID": "assignments/TA.html#due",
+    "href": "assignments/TA.html#due",
+    "title": "Text Analysis Rubric",
+    "section": "Due",
+    "text": "Due"
+  },
+  {
+    "objectID": "assignments/narrative-rubric.html#overview",
+    "href": "assignments/narrative-rubric.html#overview",
+    "title": "Narrative Portfolio Rubric",
+    "section": "",
+    "text": "You will create a digital exhibit that puts the research we’ve collected and the artifacts we’ve created in class into one project that tells a story about the Smith Papers Collection. You are synthesizing the items in the collection with what we’ve learned so far, and creating a digital story about it."
+  },
+  {
+    "objectID": "assignments/narrative-rubric.html#due",
+    "href": "assignments/narrative-rubric.html#due",
+    "title": "Narrative Portfolio Rubric",
+    "section": "Due:",
+    "text": "Due:\nDate TBA"
+  },
+  {
+    "objectID": "assignments/narrative-rubric.html#rubric",
+    "href": "assignments/narrative-rubric.html#rubric",
+    "title": "Narrative Portfolio Rubric",
+    "section": "Rubric",
+    "text": "Rubric\nSuccessful narrative projects will be evaluated on the following criteria: - Shows improvements on mini-projects from original submission - Uses narrative elements (text, links, and images) to weave together the mini-projects - Uses secondary sources to strengthen the validity of the argument within the narrative and mini-projects - Shares evidence of the digital scholarship (e.g. stop words lists, raw/clean data, explanation of process, etc.) as often and as necessary as possible - Provides ample text and explanation for all required sections - Uses markdown (and/or HTML if applicable) language to create a structured and dynamic digital exhibit"
+  },
+  {
+    "objectID": "assignments/map-rubric.html#overview",
+    "href": "assignments/map-rubric.html#overview",
+    "title": "Spatial/Temporal Data Assignment Rubric",
+    "section": "",
+    "text": "For this module, Maps and Timelines are ways for you to engage with the historical and contextual research of the collection. In groups, you will use either a map or timeline to show the progression of events or ideas, either over time or space, and to make an argument about these occurrences. For this assignment, you’ll identify a topic within the letters of noted historical significance, research the broader impact of this topic, and put the conversations from the letters within this context.\nRemember: Your project is more than a list of things! It’s a visual argument about how/why they occurred."
+  },
+  {
+    "objectID": "assignments/map-rubric.html#due",
+    "href": "assignments/map-rubric.html#due",
+    "title": "Spatial/Temporal Data Assignment Rubric",
+    "section": "Due",
+    "text": "Due\nDate TBA"
+  },
+  {
+    "objectID": "assignments/map-rubric.html#rubric",
+    "href": "assignments/map-rubric.html#rubric",
+    "title": "Spatial/Temporal Data Assignment Rubric",
+    "section": "Rubric",
+    "text": "Rubric\nSuccessful maps/timelines will be evaluated on the following criteria: Research, and the resulting timeline or map project.\n\nResearch:\n\nDefines the research question in both the headline of the timeline and the written accompaniment that goes beyond “a series of events” to explore the change over time/space\nCites Smith Papers at least 5 times, using relevant examples and excerpts\nCites at least 5 secondary sources, using relevant contextual information to ground research question\n\n\n\nTimeline/Map project:\n\nContains various media (e.g. images, sound, video, etc.) in a majority of entries\nCredits media (both within the Smith Papers Collection and that which is found online) fully\nContextualizes events with secondary source information within the description text of appropriate entries.\n\nTimeline only:\n\nUses at least 2 “groups” to put events into categories\n\nMap only:\n\nUses additional shapefile data to enrich the individually created entries"
+  },
+  {
+    "objectID": "assignments/dig-prep.html#overview",
+    "href": "assignments/dig-prep.html#overview",
+    "title": "Digital Prep Rubric",
+    "section": "",
+    "text": "Your work with individually assigned letters from the Smith Papers Collection will be the basis for this assigment. You will submit this work across 3 different submissions: - Metadata (worth 50 points) - Transcriptions (worth 100 points) - Tags (worth 50 points)\n\n\nFrom our Google Sheet, copy and paste the full metadata for the letters you were transcribing into a blank spreadsheet, and submit the .xlsx file to Canvas. Metadata will be checked for fullness (all the fields are filled in) and consistency (they are all formatted according to the guidelines).\nMetadata that receives full credit will: - complete all metadata fields, following Smith Paper Guidelines formatting consistently - use Library of Congress subject headings that are relevant and appropriate - Consider and note harmful content in the letters within appropriate fields\n\n\n\nExport and upload the .txt files of your assigned transcriptions. The file names should follow our guidelines (mcj-dp018….txt), and the transcriptions should be complete and thorough, representing the letters as faithfully as possible (see Transcribing lesson 1!\nTranscriptions that receive full credit will: - Maintain structural integrity of the original document through Transkribus’ layout analysis tool - Transcribe the letters fully and as closely to the original letter as possible, keeping original spelling, markings (where appropriate), punctuation, etc.\n\n\n\nUpload the metadata tags (e.g. person, place, organization, etc.) you created for each letter you transcribed. The exported tags will be in an .xls or .xslx format. They should have multiple tabs per sheet for each tag named (e.g. person, place, organization, etc. Each tag category has a separate tab), and there should be an “overview” tab for all tags.\nTags that receive full credit will: - tag all words as explained in our Tag Definitions list."
+  },
+  {
+    "objectID": "assignments/NA.html#overview",
+    "href": "assignments/NA.html#overview",
+    "title": "Network Analysis Rubric",
+    "section": "",
+    "text": "The Network Analysis project is a way for you to explore the relationships in the letters - who wrote to whom, how often, and to what degree. The idea is not necessarily to submit a clean, fully scrubbed network, but one that highlights a few relationships and the significance that may bring to the network as a whole."
+  },
+  {
+    "objectID": "assignments/NA.html#due",
+    "href": "assignments/NA.html#due",
+    "title": "Network Analysis Rubric",
+    "section": "Due",
+    "text": "Due\nDate TBA"
+  },
+  {
+    "objectID": "assignments/reflection.html#due",
+    "href": "assignments/reflection.html#due",
+    "title": "Final Reflection Rubric",
+    "section": "Due:",
+    "text": "Due:\nIn lieu of final exam (due date will correspond with university’s exam schedule) You may share these with me in draft form for comments and feedback before the due date."
   }
 ]

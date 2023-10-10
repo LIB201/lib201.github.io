@@ -1,15 +1,25 @@
 # Assignments
 
-[Digital Prep Assignment](/2023/code/assignments/dig-prep.html)
+[Digital Prep Assignment](/assignments/dig-prep.html)
 - Due
 - Submit
-[Network Analysis Project](/2023/code/assignments/NA.html)
+
+[Network Analysis Project](/assignments/NA.html)
 - Due
-[Map/Timeline Project](/2023/code/assignments/map-rubric.html) 
+- Submit
+
+[Map/Timeline Project](/assignments/map-rubric.html) 
 - Due
-[Text Analysis Project](/2023/code/assignments/TA.html)
+- Submit
+
+[Text Analysis Project](/assignments/TA.html)
 - Due
-[Narrative Project](/2023/code/assignments/narrative-rubric.html)
+- Submit
+
+[Narrative Project](/assignments/narrative-rubric.html)
 - Due
-[Reflection Assigment](/2023/code/assignments/reflection.html)
+- Submit
+
+[Reflection Assigment](/assignments/reflection.html)
 - Due
+- Submit

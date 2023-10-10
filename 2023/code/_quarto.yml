@@ -10,8 +10,7 @@ website:
         text: Home
       - href: schedule.md
       - href: modules.md
-
-
+      - href: assignments.md
 
 format:
   html:
@@ -19,6 +18,4 @@ format:
     # select themes from https://quarto.org/docs/output-formats/html-themes.html #
     css: styles.css
     toc: true
-
-
 

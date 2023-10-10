@@ -6,7 +6,7 @@ format:
   toc: true 
 --- 
 
-# Overview
+## Overview
 The Text Analysis assignment is a way for you to engage with the content (or, the text!) of the collection. The point of this assignment is not to _prove_ anything through text analysis tools, but to ask questions and demonstrate the process you undertook to address those questions using different tools. Think of your text anlysis assignment as a scientific experiment that uses words as its test subject!
 
 ## Due

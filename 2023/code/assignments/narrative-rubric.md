@@ -6,12 +6,13 @@ format:
   toc: true 
 --- 
 
-# Overview
+## Overview
 You will create a digital exhibit that puts the research we've collected and the artifacts we've created in class into one project that tells a story about the Smith Papers Collection. You are synthesizing the items in the collection with what we've learned so far, and creating a digital story about it.
 
-# Due:
+## Due:
+Date TBA 
 
-# Rubric
+## Rubric
 Successful narrative projects will be evaluated on the following criteria: 
 - Shows improvements on mini-projects from original submission
 - Uses narrative elements (text, links, and images) to weave together the mini-projects

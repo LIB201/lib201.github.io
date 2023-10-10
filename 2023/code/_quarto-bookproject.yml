@@ -1,0 +1,17 @@
+project:
+  type: book
+book:
+  title: "Intro to Digital Research, LIB 201"
+  chapters:
+    - href: index.md
+    - href: schedule.md
+    - href: assignments.md
+    - href: assignments/dig-prep.md
+    - href: assignments/map-rubric.md
+    - href: assignments/NA.md
+    - href: assignments/TA.md
+    - href: assignments/narrative-rubric.md
+    - href: assignments/reflection.md
+
+format:
+  pdf: default
