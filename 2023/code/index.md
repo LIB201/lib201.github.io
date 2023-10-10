@@ -2,7 +2,7 @@
 
 ## Meeting Time & Place
 
-Monday, 6:00 - 8:45
+Monday, 6:00 - 8:45 
 Fant Library Seminar B (unless otherwise instructed)
 
 ## Instructor information

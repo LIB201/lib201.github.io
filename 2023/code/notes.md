@@ -69,3 +69,5 @@ Meeting with Toneisha Taylor
 - fixed home page (index.md) and copied from syllabus. Do I need to have this info twice?
 - syllabus slideshow thing. Where to edit again?
 - added modules.md to index
+- published in org: LIB201, repo: lib201.github.io, folder: 2023
+- **to publish to website, edit in "code" and then copy/paste into current folder (i.e. 2023)**

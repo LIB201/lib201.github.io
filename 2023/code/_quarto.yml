@@ -1,6 +1,6 @@
 project:
   type: website
-
+  output-dir: ../
 website:
   title: "Intro to Digital Research, LIB 201"
   navbar:
@@ -10,6 +10,7 @@ website:
         text: Home
       - href: schedule.md
       - href: modules.md
+
 
 
 format:
