@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hillary Richardson">
+
+<title>Intro to Digital Research, LIB 201 - Introduction to Transcribing</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intro to Digital Research, LIB 201</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">LIB 201 - Intro to Digital Research</span></a>
+  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">modules.md</span></li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#transcribing-guidelines" id="toc-transcribing-guidelines" class="nav-link" data-scroll-target="#transcribing-guidelines">1. Transcribing Guidelines</a>
+  <ul class="collapse">
+  <li><a href="#check-in" id="toc-check-in" class="nav-link" data-scroll-target="#check-in">Check-in</a></li>
+  </ul></li>
+  <li><a href="#text-regions-in-transkribus" id="toc-text-regions-in-transkribus" class="nav-link" data-scroll-target="#text-regions-in-transkribus">2. Text Regions in Transkribus</a>
+  <ul class="collapse">
+  <li><a href="#the-text-regions-we-will-work-with-are" id="toc-the-text-regions-we-will-work-with-are" class="nav-link" data-scroll-target="#the-text-regions-we-will-work-with-are">The text regions we will work with are:</a></li>
+  <li><a href="#run-a-layout-analysis" id="toc-run-a-layout-analysis" class="nav-link" data-scroll-target="#run-a-layout-analysis">Run a Layout Analysis</a></li>
+  <li><a href="#layout-analysis-corrections" id="toc-layout-analysis-corrections" class="nav-link" data-scroll-target="#layout-analysis-corrections">Layout Analysis Corrections</a></li>
+  <li><a href="#check-in-1" id="toc-check-in-1" class="nav-link" data-scroll-target="#check-in-1">Check-in</a></li>
+  </ul></li>
+  <li><a href="#handwritten-text-recognition" id="toc-handwritten-text-recognition" class="nav-link" data-scroll-target="#handwritten-text-recognition">3. Handwritten Text Recognition</a>
+  <ul class="collapse">
+  <li><a href="#check-in-2" id="toc-check-in-2" class="nav-link" data-scroll-target="#check-in-2">Check-in</a></li>
+  </ul></li>
+  <li><a href="#metadata-tags" id="toc-metadata-tags" class="nav-link" data-scroll-target="#metadata-tags">4. Metadata Tags</a>
+  <ul class="collapse">
+  <li><a href="#categories-of-metadata-tags" id="toc-categories-of-metadata-tags" class="nav-link" data-scroll-target="#categories-of-metadata-tags">Categories of metadata tags</a></li>
+  <li><a href="#metadata-tags-defined." id="toc-metadata-tags-defined." class="nav-link" data-scroll-target="#metadata-tags-defined.">Metadata tags, defined.</a></li>
+  <li><a href="#how-to-tag-something" id="toc-how-to-tag-something" class="nav-link" data-scroll-target="#how-to-tag-something">How to tag something</a></li>
+  <li><a href="#check-in-3" id="toc-check-in-3" class="nav-link" data-scroll-target="#check-in-3">Check-in</a></li>
+  </ul></li>
+  <li><a href="#exporting-files-in-transkribus" id="toc-exporting-files-in-transkribus" class="nav-link" data-scroll-target="#exporting-files-in-transkribus">5. Exporting files in Transkribus</a>
+  <ul class="collapse">
+  <li><a href="#extract-zipped-files" id="toc-extract-zipped-files" class="nav-link" data-scroll-target="#extract-zipped-files">Extract zipped files</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Transcribing</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hillary Richardson </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level1" data-background="#005c96">
+<h1 data-background="#005c96">Overview</h1>
+<p>In this module, you will learn: * Basic transcribing guidelines * How to create and edit text regions in Transkribus * How to use style and metadata tags in Transkribus</p>
+<p>Why do we transcribe documents? On one level, transcribing something allows you to become intimately familiar with the contents of a document. By the end of this semester, you may be invested in a family that isn’t your own! <!-- Link to article in History Newsletter--></p>
+<p>Furthermore, transcribing makes physical documents, especially handwritten documents, <strong>machine readable</strong>. In other words, it allows computers to recognize text. Think about it – scanned letters are pictures of text, which is something a machine cannot translate. Even though there are programs that can attempt to read handwriting (like Transkribus) and even typed text<!--link to Explain that stuff "What is OCR-->, computers aren’t smart enough to read things humans are!</p>
+<p><strong>Transcribing something bridges the gap between reading a document, and storing a picture of one.</strong></p>
+<!--## Lessons
+1. [Transcribing Guidelines](#1-transcribing-guidelines)
+2. [Text Regions in Transkribus](#2-text-regions-in-transcribus)
+3. [Handwritten Text Recognition](#3-handwritten-text-recognition)
+4. [Metadata Tags](#4-metadata-tags)
+5. [Exporting Files in Transkribus](#5-exporting-files-in-transkribus)-->
+<section id="transcribing-guidelines" class="level2" data-background="005c96">
+<h2 data-background="005c96" class="anchored" data-anchor-id="transcribing-guidelines">1. Transcribing Guidelines</h2>
+<p>In order to maintain the integrity of your original document while you are translating it for the computer, consider a few things while you’re transcribing.</p>
+<ol type="1">
+<li>Stay as true to the document as you can!</li>
+</ol>
+<ul>
+<li>Include all text as it is written. This includes errors in spelling and grammar, and words you might not be familiar with. Transcribing is NOT editing!</li>
+<li>If there are images in the text, describe them in brackets (e.g.&nbsp;“[doodle of a curly-haired smiling face]”).</li>
+<li>Keep it simple! You want people to be able to read the transcription without looking at the original letter. Your transcriptions will be plain text files (e.g.&nbsp;files with no formatting), so, without editorializing, keep the text readable as possible.</li>
+</ul>
+<ol start="2" type="1">
+<li>If you have trouble reading the text…</li>
+</ol>
+<ul>
+<li>Take a break and come back. Fresh eyes make a difference!</li>
+<li>Try to read the words in context. The word might look like “fhe,” but it doesn’t make sense to read “And then fhe called her sister.” You would realize the word is “she.”</li>
+<li>Ask for help. Send a screenshot to your classmates, or post it in the Teams channel.</li>
+<li>If you’ve tried all these things, and it’s just not possible to figure out, write <code>[illegible]</code> in brackets and tag that text with the “gap” tag (more on tags in section IV!).</li>
+</ul>
+<ol start="3" type="1">
+<li>Take notes while you are transcribing</li>
+</ol>
+<ul>
+<li>Make note of things you don’t understand, and Google them to see if you can make sense of the reference.</li>
+<li>You might find something interesting that you want to come back to! Take notes of the letters you transcribe, and what you find interesting about them.</li>
+</ul>
+<section id="check-in" class="level3" data-background="ffffff">
+<h3 data-background="ffffff" class="anchored" data-anchor-id="check-in">Check-in</h3>
+<p>Practice transcribing a few lines, staying true to the original text with the <a href="https://muw.instructure.com/courses/19899/quizzes/78702">0.Transcribing Check-in</a>.</p>
+</section>
+</section>
+<section id="text-regions-in-transkribus" class="level2" data-background="005c96">
+<h2 data-background="005c96" class="anchored" data-anchor-id="text-regions-in-transkribus">2. Text Regions in Transkribus</h2>
+<p><em>Download Transkribus before starting this section</em></p>
+<p>Before we get started actually transcribing, we have to tell Transkribus what parts of the page have text on them, and what order to read that text! (Remember, computers aren’t smart enough to read like humans!)</p>
+<section id="the-text-regions-we-will-work-with-are" class="level3">
+<h3 class="anchored" data-anchor-id="the-text-regions-we-will-work-with-are">The text regions we will work with are:</h3>
+<p>The page (or “text region”), where text is: <img src="images/transcribing-images/text-region-screenshot.png" class="img-fluid" alt="screenshot of green text region"></p>
+<p>The line of text, as in the full, left-to-write line: <img src="images/transcribing-images/line-screenshot.png" class="img-fluid" alt="screenshot of light blue line highlighted"></p>
+<p>And the baseline, which underlines the words themselves: <img src="images/transcribing-images/baseline-screenshot.png" class="img-fluid" alt="dark-blue dashed line within the light blue outline"></p>
+</section>
+<section id="run-a-layout-analysis" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="run-a-layout-analysis">Run a Layout Analysis</h3>
+<p>Transkribus does a pretty good job of identifying these text regions for us. The quickest way to do this is to run a layout analysis on the document, then correct any mistakes that Transkribus makes. Here’s how you run the analysis:</p>
+<ol type="1">
+<li>Double click the document you’ve uploaded, and click on the Tools tab.</li>
+<li>Under Layout Analysis, make sure you’ve selected all pages.</li>
+<li>Click Run</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/layout-analysis-screenshot.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of layout analysis</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>A notification that the layout analysis is in progress will pop up. After a few moments (between 3 and 10 seconds), the layout (green squares, blue rectangles, and dark blue lines) will appear over the letter’s text.</li>
+</ol>
+</section>
+<section id="layout-analysis-corrections" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="layout-analysis-corrections">Layout Analysis Corrections</h3>
+<ol start="5" type="1">
+<li>Correct errors in the layout (e.g.&nbsp;delete text regions or lines that don’t cover text, resize regions that cut off text, reorder line numbers, or merge lines that have been split).</li>
+</ol>
+<ul>
+<li><p>Text regions that don’t actually contain any transcribe-able text. <img src="images/transcribing-images/no-text-layout-error.JPG" class="img-fluid" alt="Screenshot of a layout analysis that has created a line where there isn’t text"></p></li>
+<li><p>This layout analysis split a line in two, and needs merging. (Sometimes, though less frequently, it will merge something that should be two lines. For this, use the scissor tools above the merge tool.) Holding control, click each region that needs joining (usually the baseline and the line) and then click merge. <img src="images/transcribing-images/merge-error-screenshot.png" class="img-fluid" alt="Screenshot of a text region split"></p></li>
+<li><p>Sometimes the software will number things in a different order than we’d actually read them. Click on the eye in the top toolbar, and select <code>show lines reading order</code>. If the lines are out of order, click on the numbers to change them. <img src="images/transcribing-images/line-reading-order-screenshot.JPG" class="img-fluid" alt="screenshot of lines reading order"></p></li>
+</ul>
+</section>
+<section id="check-in-1" class="level3" data-background="ffffff">
+<h3 data-background="ffffff" class="anchored" data-anchor-id="check-in-1">Check-in</h3>
+<p>Complete <a href="https://muw.instructure.com/courses/19899/quizzes/78704">2.Transcribing Check-in</a> before moving on to the next section.</p>
+</section>
+</section>
+<section id="handwritten-text-recognition" class="level2" data-background="005c96">
+<h2 data-background="005c96" class="anchored" data-anchor-id="handwritten-text-recognition">3. Handwritten Text Recognition</h2>
+<p>Transkribus allows you to create Handwritten Text Recognition (HTR) models. Over the past 2 years that we’ve worked on this project, we have transcribed over 100 letters and trained the program to begin to recognize Pauline Smith’s handwriting. This allows us to run the model on letters in the collection and start with a more complete transcription to correct, rather than having to transcribe the letter from scratch.</p>
+<ol type="1">
+<li>To transcribe with the HTR model, click on the Tools tab, and under Text Recognition, select the model called “Pauline Smith 2.0.” You might have to navigate to the next page to find the Pauline Smith model.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/htr-step1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of the Text recognition tool</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/htr-step2.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of Pauline Smith’s HTR model</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Click Run. The HTR analysis may take anywhere from 20 seconds to 2 minutes. A notification that the “job” is done will pop up when analysis is complete. From there, correct the transcription.</li>
+<li>Transcribe each page as you see it, following Smithsonian and Transkribus transcription guidelines. You may have a few errors on a page or there may be significant errors. It depends on several things - the quality of the scan, the quality of the document, the handwriting and what utensil they used, etc.!</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/htr-corrections-example.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of HTR errors</figcaption>
+</figure>
+</div>
+<ol start="4" type="1">
+<li>After you’ve completed editing the transcription, go back over the letter, making sure you didn’t miss typos, and you can simultaneously begin tagging the document, which will be explained in the next lesson!</li>
+</ol>
+<section id="check-in-2" class="level3" data-background="ffffff">
+<h3 data-background="ffffff" class="anchored" data-anchor-id="check-in-2">Check-in</h3>
+<p>Complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78708">Transcribing Check-in</a> before moving on to the next section.</p>
+</section>
+</section>
+<section id="metadata-tags" class="level2" data-background="005c96">
+<h2 data-background="005c96" class="anchored" data-anchor-id="metadata-tags">4. Metadata Tags</h2>
+<p>Tagging, annotating, or marking-up a document is a common practice for text analysis. Why is this? Think about the things someone might talk to you about in a letter. They might mention people they talked about, places they went, or a book they read. Now think about the contents of 6,000 letters, and all of this information together! Tagging will allow us to use the information in the collection of thousands of letters to track these trends over time, explore topics, and find people.</p>
+<p>Think of tagging the letter like highlighting categories of information with a different color highlighter. All of the people’s names are blue, the places are purple, etc. Transkribus does the same thing.</p>
+<section id="categories-of-metadata-tags" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="categories-of-metadata-tags">Categories of metadata tags</h3>
+<p>It is tempting to tag everything, but not necessary! You only need to tag: 1. Important words (e.g.&nbsp;people and places) 2. When you add something for clarity that isn’t there originally (e.g.&nbsp;“[illegible]”). 3. If you want to provide further information as context.</p>
+</section>
+<section id="metadata-tags-defined." class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="metadata-tags-defined.">Metadata tags, defined.</h3>
+<p>Here are the tags we have, to this point, decided to use for the Smith Collection, and their definitions. (For the info below in a Google Doc, click <a href="https://docs.google.com/document/d/1zpzWtUEvXBDhJAt9xNxpp4Kif2ov4V-y1nGntZbPqyo/edit?usp=sharing">here</a>. And for more info about how Transkribus feels about tags, click <a href="https://readcoop.eu/transkribus/howto/how-to-enrich-transcribed-documents-with-mark-up/">here</a>.)</p>
+<ol type="1">
+<li><strong>person</strong> - when any person’s name is mentioned within the body of the letter (e.g.&nbsp;“Daddy,” Martha, Gilbert, etc.), or when a person is referred to (e.g.&nbsp;“Martha’s friend boy,” or “Jewish soldier”).</li>
+<li><strong>place</strong> - when a place name is mentioned within the body of the letter. This does not usually include general places like Sunday school or hospital. Examples would be town names like Bruce or Memphis. sender - The person who sent the letter, either in the return address, or in the letter’s closing.</li>
+<li><strong>recipient</strong> - The person the letter is addressed to, either on the envelope, or in the salutation.</li>
+<li><strong>sender</strong> - The person who wrote the letter. They usually put their name in the return address and in the signature.</li>
+<li><strong>address</strong> - The address the letter was sent to.</li>
+<li><strong>return-address</strong> - the address the letter came from (not always included)</li>
+<li><strong>organization</strong> - a specific group, corporation, or entity (e.g.&nbsp;the Senate, the T.V.A., or Ole Miss), not a generic place like hospital or school.</li>
+<li><strong>sic</strong> - for an error in the original letter (i.e.&nbsp;spelling, grammar, etc.) that you include it in the transcript for accuracy, tag it with “sic,” showing that it’s “as is,” and you didn’t make the error in transcribing.</li>
+<li><strong>title</strong> - the title of a book, play, radio show, government decision, etc. Anything that is published, for example. Specifications may include full title, author, and publication date.</li>
+<li><strong>date</strong> - a specific date (e.g.&nbsp;January 15th, 1948). This does not include general references to days of the week or years (e.g.&nbsp;“Saturday nite” or “next year.”)</li>
+<li><strong>unclear</strong> - when you write something in the transcription, but aren’t sure of what it actually says in the letter: a guess.</li>
+<li><strong>gap</strong> (formerly supplied) - when you include something (i.e.&nbsp;[illegible], a note, etc.) that isn’t in the original letter to give clarity, but to prevent the HTR from picking up the note.</li>
+</ol>
+</section>
+<section id="how-to-tag-something" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="how-to-tag-something">How to tag something</h3>
+<ol type="1">
+<li>To tag something, highlight the text you want to tag, right-click, and from “All tags,” select the relevant tag.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/tag-screenshot.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of how to tag something</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>If the tag isn’t in the list, go to the metadata menu, then the Textual menu, and click Customize.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/customize-tag.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of customize tag</figcaption>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Click “Create new tag,” then type in the name of the tag, lowercase, like it’s shown in the Tag definitions document.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/create-new-tag.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of creating a new tag</figcaption>
+</figure>
+</div>
+</section>
+<section id="check-in-3" class="level3" data-background="ffffff">
+<h3 data-background="ffffff" class="anchored" data-anchor-id="check-in-3">Check-in</h3>
+<p>Tags are sort of tricky! Let’s go over the different scenarios in the next <a href="https://muw.instructure.com/courses/19899/quizzes/78697">4.Transcribing Check-in</a>. Complete this before moving on to the next section.</p>
+<p>As a reminder, there is a video of transcribing a letter from beginning to end, which you can watch as a refresher: https://youtu.be/-cDD9P0rnLw.</p>
+<p>At the end of this lesson, you should be able to fill out the full transcription and tags in your letters, and turn them in in Canvas.</p>
+</section>
+</section>
+<section id="exporting-files-in-transkribus" class="level2" data-background="005c96">
+<h2 data-background="005c96" class="anchored" data-anchor-id="exporting-files-in-transkribus">5. Exporting files in Transkribus</h2>
+<p>After you have transcribed (or corrected a transcription of) a letter, tagged it, <em>and</em> proofed it, it has been digitally transformed, and we can now do fun things with the transcriptions and metadata. But before you can do that, you have to export the files.</p>
+<p>Before the step-by-step, I recommend watching <a href="https://youtu.be/k21t3jGL4LM">this 3-minute video</a> on this process.</p>
+<p>Click the export button (a manila folder with a green, right-facing arrow), and you will choose the following files to export: * .docx - to give you a formatted version of the transcript * .txt - to give a non-formatted version of the transcript * .xlsx (tag export) - to give you structured lists of the tags you created</p>
+<p><em>If you would like to export more than one document, select the radio button that says “Current Collection,” and choose which letters to export.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/export.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of Export Document option</figcaption>
+</figure>
+</div>
+<section id="extract-zipped-files" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="extract-zipped-files">Extract zipped files</h3>
+<p>When you click OK, Transkribus emails you a temporary link where you can access the compressed files you just created. Compressing them allows them to send large amounts of data over email. When you click the link, it will ask you to save the compressed files (.zip).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/extract-files-1.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of saving compressed folder</figcaption>
+</figure>
+</div>
+<p>Saving them as compressed files <em>stores</em> them to your computer, but does not let you access them until you extract them. Right-click your compressed folder and click <code>Extract All...</code> then tell your computer where you want to extract them to. I recommend saving them to a folder where you’re keeping files for this class. (We will also store them on a cloud server, e.g.&nbsp;Google Drive or our Institutional Repository at some point.)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/transcribing-images/extract-files-2.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of extracting files to a destination</figcaption>
+</figure>
+</div>
+<p>After you extract the files, you should notice that your folder no longer has a zipper on it, and you have 3 files that represent digital versions of the letter you prepared. You are now ready to start playing with these digital artifacts!</p>
+<!--Link to upload exported letters in Canvas-->
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

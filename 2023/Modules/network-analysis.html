@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="LIB 201">
+
+<title>Intro to Digital Research, LIB 201 – network-analysis</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intro to Digital Research, LIB 201</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">LIB 201 - Intro to Digital Research</span></a>
+  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">modules.md</span></li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview:</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-network-analysis" id="toc-what-is-a-network-analysis" class="nav-link" data-scroll-target="#what-is-a-network-analysis">1. What is a Network Analysis?</a>
+  <ul class="collapse">
+  <li><a href="#check-in" id="toc-check-in" class="nav-link" data-scroll-target="#check-in">Check-in</a></li>
+  </ul></li>
+  <li><a href="#network-analysis-terms" id="toc-network-analysis-terms" class="nav-link" data-scroll-target="#network-analysis-terms">2. Network Analysis Terms</a>
+  <ul class="collapse">
+  <li><a href="#networks" id="toc-networks" class="nav-link" data-scroll-target="#networks">Networks</a></li>
+  <li><a href="#nodes" id="toc-nodes" class="nav-link" data-scroll-target="#nodes">Nodes</a></li>
+  <li><a href="#edges" id="toc-edges" class="nav-link" data-scroll-target="#edges">Edges</a></li>
+  <li><a href="#paths" id="toc-paths" class="nav-link" data-scroll-target="#paths">Paths</a></li>
+  <li><a href="#check-in-1" id="toc-check-in-1" class="nav-link" data-scroll-target="#check-in-1">Check-in</a></li>
+  </ul></li>
+  <li><a href="#analyzing-relational-data" id="toc-analyzing-relational-data" class="nav-link" data-scroll-target="#analyzing-relational-data">2. Analyzing relational data</a>
+  <ul class="collapse">
+  <li><a href="#centrality" id="toc-centrality" class="nav-link" data-scroll-target="#centrality">Centrality</a></li>
+  </ul></li>
+  <li><a href="#betweenness-centrality" id="toc-betweenness-centrality" class="nav-link" data-scroll-target="#betweenness-centrality">Betweenness Centrality</a>
+  <ul class="collapse">
+  <li><a href="#check-in-2" id="toc-check-in-2" class="nav-link" data-scroll-target="#check-in-2">Check-in</a></li>
+  </ul></li>
+  <li><a href="#data-modeling-for-visualizing-a-network" id="toc-data-modeling-for-visualizing-a-network" class="nav-link" data-scroll-target="#data-modeling-for-visualizing-a-network">3. Data Modeling for Visualizing a Network</a>
+  <ul class="collapse">
+  <li><a href="#check-in-3" id="toc-check-in-3" class="nav-link" data-scroll-target="#check-in-3">Check in</a></li>
+  </ul></li>
+  <li><a href="#cleaning-data" id="toc-cleaning-data" class="nav-link" data-scroll-target="#cleaning-data">Cleaning Data</a>
+  <ul class="collapse">
+  <li><a href="#check-in-4" id="toc-check-in-4" class="nav-link" data-scroll-target="#check-in-4">Check-in</a></li>
+  </ul></li>
+  <li><a href="#software-for-visualizing-a-network-analysis" id="toc-software-for-visualizing-a-network-analysis" class="nav-link" data-scroll-target="#software-for-visualizing-a-network-analysis">4. Software for visualizing a network analysis</a>
+  <ul class="collapse">
+  <li><a href="#preparing-your-visualization" id="toc-preparing-your-visualization" class="nav-link" data-scroll-target="#preparing-your-visualization">Preparing your visualization</a></li>
+  <li><a href="#check-in-5" id="toc-check-in-5" class="nav-link" data-scroll-target="#check-in-5">Check-in</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Network Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>LIB 201 </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level1">
+<h1>Overview:</h1>
+<ul>
+<li>Understand how network analyses help answer research questions with quantitative and visual components.</li>
+<li>Identify parts of a network</li>
+<li>Analyze relational data using different modes of centrality to determine the influence of individual nodes within the network</li>
+<li>Clean and model data according to a specific question</li>
+<li>Use Palladio to customize and interrogate the network</li>
+<li>Explain the existing relationships in the network</li>
+</ul>
+<section id="what-is-a-network-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-network-analysis">1. What is a Network Analysis?</h2>
+<p>A Network Analysis is simply a study of relationships among a group of connected things. The “things” could be people, cities, cells in the body, etc.! The idea of a network analysis is to visualize these relationships, so you can see the patterns (or lack thereof) in connections within the network.</p>
+<p><img src="https://networkofthrones.files.wordpress.com/2020/01/got-all8.png" alt="sample network analysis graph that uses Game of Thrones characters, with largest nodes including Tyrion in light blue, Daenerys in green, Jon in orange, Arya in yellow, and Sansa in pink. From https://networkofthrones.wordpress.com/the-series/seasons-1-8/" class="center"></p>
+<p>We use network analysis to ask questions about the players in the network, like * Who is the most/least influential? * What are some of the roles of the different things in this network? * How connected are the things in this network? * Are there distinct subgroups or “neighborhoods” in this network?</p>
+<p>For the Smith Papers collection, we are asking these questions, more or less!</p>
+<table class="table">
+<colgroup>
+<col style="width: 54%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Question</th>
+<th>Smith Papers Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Who is the most influential?</td>
+<td>Which person wrote the most letters to the most people?</td>
+</tr>
+<tr class="even">
+<td>How connected is this network?</td>
+<td>Did everyone write letters to each other, or just some people?</td>
+</tr>
+<tr class="odd">
+<td>What are the distinct groups?</td>
+<td>Who wrote to each other most often?</td>
+</tr>
+</tbody>
+</table>
+<!-- ## Lessons:
+1. [Network Analysis Terms](#1-network-analysis-terms)
+2. [Analyzing Relational Data](#2-analyzing-relational-data)
+3. [Data Modeling for Visualizing a Network](#3-data-modeling-for-visualizing-a-network)
+4. [Software for visualizing a network analysis](#4-software-for-visualizing-a-network-analysis)-->
+<p>Network analysis visualizations are excellent ways to show what’s going on in a complex network, but they cannot stand alone! Even the most clearly labeled network needs context. When you are creating a networked graph, include some writing that gives context to the network, and shows the things you chose to highlight. Then include that explanation alongside the graph in an accessible way.</p>
+<p>Another thing to consider when making highly visual graphs, like the one above, is how <em>accessible</em> your visualization may or may not be to everyone, including those with visual impairments. Consider the following when designing a graph: * Are your labels large enough to read? * Are the colors <a href="https://webaim.org/resources/contrastchecker/">in high enough contrast </a> to distinguish from each other? * Is there alternate text or description somewhere that explains the graph with as clearly worded text as possible? * Do the density of clusters and lines prevent someone from reading what’s going on in your graph?</p>
+<p><em>Many thanks to Dr.&nbsp;Katayoun Torabi’s 2020 Programming4Humanists Presentation “Introduction to Gephi” for modeling network analysis and providing the basis for this lesson.</em></p>
+<section id="check-in" class="level3">
+<h3 class="anchored" data-anchor-id="check-in">Check-in</h3>
+<p>Complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78707">1.Network Analysis check-in</a> before moving on to the next section.</p>
+<!--### Acknowledgements
+* Lecture notes from Dr. Katayoun Torabi, Programming for Humanists Instructor, Center of Digital Humanities Research at Texas A&M University. http://programming4humanists.tamu.edu/
+* Images of sample networks from https://www.coursera.org/lecture/networks-illustrated/closeness-centrality-part-ii-cqA9S
+* Images of steps in Palladio used from https://hdlab.stanford.edu/palladio/tutorials/data/.-->
+</section>
+</section>
+<section id="network-analysis-terms" class="level2">
+<h2 class="anchored" data-anchor-id="network-analysis-terms">2. Network Analysis Terms</h2>
+<p>Most softwares that facilitate Network Analyses use a different vocabulary. You’ll learn about what each part of a network is in this section, and in the next section, we’ll talk about different ways analyze those parts.</p>
+<section id="networks" class="level3">
+<h3 class="anchored" data-anchor-id="networks">Networks</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide3.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of a simple network with 6 green and pink nodes and edges</figcaption>
+</figure>
+</div>
+<p>A network is a visual representation of relationships between entities. The network alone does not always share the context of the relationships (e.g.&nbsp;“These are people who talk to each other in this book,” or “These are the flight paths among major airlines,”), but they do highlight relationships. In doing so, they show how different players dominate (or not!) those relationships.</p>
+</section>
+<section id="nodes" class="level3">
+<h3 class="anchored" data-anchor-id="nodes">Nodes</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide5.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of a simple network the nodes circled</figcaption>
+</figure>
+</div>
+<p>A node represents someone or something in the network. For the Smith Papers project, it will most likely be a person. Nodes can be different colors, depending on how influential they are, what subgroups within the network they belong to, etc.</p>
+</section>
+<section id="edges" class="level3">
+<h3 class="anchored" data-anchor-id="edges">Edges</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide6.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of a simple network the edges highlighted</figcaption>
+</figure>
+</div>
+<p>Edges represent the relationships between nodes. They usually indicate some kind of interaction in a relationship (e.g.&nbsp;conversation, travel, transactions, etc.), and depending on that interaction, an edge can be one of two kinds:</p>
+<ul>
+<li><strong>Undirected</strong> - an undirected edge indicates that the interaction is reciprocal, like a two-way street, a friendship, a characteristic, etc.</li>
+<li><strong>Directed</strong> - a directed edge indicates that the interaction is <strong>not</strong> reciprocal, like a one-way trip, a letter sent to someone, a payment for something, etc. In directed edges, there are those that give, and those that receive (just like in a <em>real</em> relationship!):
+<ul>
+<li><strong>Source</strong> - the source is the originator of the interaction, or the giver. Sometimes this is called “out-degree.”</li>
+<li><strong>Target</strong> - the target is where the interaction is directed, or the receiver. Sometimes this is called “in-degree.”</li>
+</ul></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide7.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of 2 simple networks with directed edges, indicated by arrows, and undirected edges, indicated by straight lines</figcaption>
+</figure>
+</div>
+</section>
+<section id="paths" class="level3">
+<h3 class="anchored" data-anchor-id="paths">Paths</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide4.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of a simple network with 6 nodes connected by 7 edges</figcaption>
+</figure>
+</div>
+<p>Paths are the length from one node to the next. In this image, the path length from Ben to Anna is 1, but the path length from Ben to Cara is 2, and so on. The average length of each path will tell us how <em>dense</em> the network is, or in other words, how connected everyone is to each other. If everyone is connected to everyone by 1 path, the network is 100% dense!</p>
+<p>…just a few more terms! Stick with me!…</p>
+</section>
+<section id="check-in-1" class="level3">
+<h3 class="anchored" data-anchor-id="check-in-1">Check-in</h3>
+<p>Login to Canvas and complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78698">1.Network Analysis check-in</a> before moving on to the next section.</p>
+</section>
+</section>
+<section id="analyzing-relational-data" class="level2">
+<h2 class="anchored" data-anchor-id="analyzing-relational-data">2. Analyzing relational data</h2>
+<p>Did that phrase make your stomach turn? Don’t worry! We are not actually doing math in this class, but we will be using mathematic concepts. We analyze networks by calculating the ways nodes influence each other. Let’s break it down.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide8.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of a simple network with different sized nodes</figcaption>
+</figure>
+</div>
+<section id="centrality" class="level3">
+<h3 class="anchored" data-anchor-id="centrality">Centrality</h3>
+<p>Centrality is the relative influence of individual nodes within the network. In the image above, the nodes have different sizes and colors to indicate their influence. Notice that Pauline has several direct connections, so they are the largest node. Other nodes, like Martha, have fewer connections, and therefore appear smaller. From this, we infer that Pauline has a more influential role in the network.</p>
+<p>For this class, we will measure centrality with 3 different metrics: * Degree * Closeness * Betweenness <!--* Eigenvector (!)--></p>
+<section id="degree-centrality" class="level4">
+<h4 class="anchored" data-anchor-id="degree-centrality">Degree Centrality</h4>
+<p>The degree of a node is how connected or influential a node is within the network, so degree centrality counts the number of direct connections a node has. In the previous image, Edith Pauline Smith has the highest degree centrality because she has the most immediate connections. To indicate this, we have made the size of node labels correspond to degree, which for Pauline, is the largest.</p>
+</section>
+<section id="closeness-centrality" class="level4">
+<h4 class="anchored" data-anchor-id="closeness-centrality">Closeness Centrality</h4>
+<p>Another simple metric is called closeness centrality, which measures which node has the shortest average path to the rest of the nodes in the network.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide9.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of a simple network with subgroups</figcaption>
+</figure>
+</div>
+<p>Unlike degree, which measures direct connections, closeness measures the proximity of a node to all the other nodes through average path. There are 8 total edges in the network above. If we wanted to calculate the closeness centrality of B, we’d count the shortest path from B to every other node, and take the average.</p>
+<p><br>B -&gt; A = 2 <br>B -&gt; C = 1 <br>B -&gt; D = 1 <br>B -&gt; E = 3 <br>B -&gt; F = 4 <br>B -&gt; G = 4 <br>B -&gt; H = 0 (there are no paths to H from B!) <br>B -&gt; I = 0 (there are no paths to I from B!)</p>
+<p>B has a closeness centrality of 1.875. (There are 15 total paths to every other node, and 8 total edges, so 15/8=1.875). So this node has more direct connections (2), but is less “close” in terms of the entire network (1.875).</p>
+</section>
+</section>
+</section>
+<section id="betweenness-centrality" class="level2">
+<h2 class="anchored" data-anchor-id="betweenness-centrality">Betweenness Centrality</h2>
+<p>Degree and Closeness measure influence through connections and paths. Betweenness centrality indicates nodes that are “bridges” between different groups in a network. In other words, they glue pieces of a less dense network together, or they serve as a “go-between” for 2 distinct parts of the network.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide10.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">example of a simple network that is loosely connected, but bridged together by a node in the center</figcaption>
+</figure>
+</div>
+<!--## Eigenvector Centrality
+This is the last metric to consider here, and it's essentially an algorithm that calculates which nodes are connected to the most well-connected. (Don't worry, we won't be actually doing this calculating. It's just worth understanding!) In other words, it determines how close a node is to more well-connected nodes.
+
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/Slide11.JPG" alt="example of a network with a node in the middle that has fewer direct connections, but a higher eigenvector centrality because the nodes around it have higher degree centrality" width="" height="" /></p>
+
+Whew! That's it.-->
+<section id="check-in-2" class="level3">
+<h3 class="anchored" data-anchor-id="check-in-2">Check-in</h3>
+<p>Log in to Canvas and complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78691">2.Network Analysis check in</a> before moving on to the next section.</p>
+</section>
+</section>
+<section id="data-modeling-for-visualizing-a-network" class="level2">
+<h2 class="anchored" data-anchor-id="data-modeling-for-visualizing-a-network">3. Data Modeling for Visualizing a Network</h2>
+<p>In order to tell the software (which we go over in the next section) how to recognize which nodes are connected, and by what paths, we are going to create a spreadsheet with “tidy data.” Each column will have a variable, and each row will be an observation of that variable.</p>
+<p>The most important thing to remember when structuring data for a network analysis is this: what question are you trying to answer with a network analysis graph? Are you trying to see who someone is writing to in a letter? Are you trying to find out who has written the most letters and who has received the most? Are you trying to figure out who gets mentioned more times by one person than another? All of this matters. For instance, if we wanted to see where the letters were coming from and who is writing to whom, we could structure the data like this:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Target</th>
+<th>Address</th>
+<th>Return Address</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pauline Smith</td>
+<td>Sam H. Smith</td>
+<td>Pittsboro</td>
+<td>Jackson</td>
+</tr>
+<tr class="even">
+<td>Christine Smith</td>
+<td>Pauline Smith</td>
+<td>Starkville</td>
+<td>Pittsboro</td>
+</tr>
+<tr class="odd">
+<td>Pauline Smith</td>
+<td>Martha Smith</td>
+<td>Pittsboro</td>
+<td>Meridian</td>
+</tr>
+</tbody>
+</table>
+<p>In this graph, each column heading (the variables) has one observation (the information in one letter). That’s tidy data!</p>
+<p>Say, for instance, though, that we want to see all of the people mentioned in several letters to get a better idea of the network of people in the lives of the Smith family members and their friends. We could structure our data so that each source (the letter writer) has a target (the person they write to and the people they mention), and each target has either a reciprocal (undirected) or non-reciprocal (directed) edge.</p>
+<section id="check-in-3" class="level3">
+<h3 class="anchored" data-anchor-id="check-in-3">Check in</h3>
+<p>Using a pencil and paper, sketch what you think the second example’s graph might look like. Upload that sketch in Canvas on the <a href="https://muw.instructure.com/courses/19899/quizzes/78687">3. Network Analysis check-in</a> before moving on to the next section.</p>
+</section>
+</section>
+<section id="cleaning-data" class="level2">
+<h2 class="anchored" data-anchor-id="cleaning-data">Cleaning Data</h2>
+<p>Wouldn’t it be nice if you could just copy and paste some names in a list into a spreadsheet, and click a button to make a nice network graph? IT NEVER WORKS THAT WAY! But that’s part of the work of the digital scholar - is to structure data through a process of cleaning and testing it, in order to see if they can answer a question through visualization. Hadley Wickham, author of <a href="https://vita.had.co.nz/papers/tidy-data.pdf">Tidy Data</a> says:</p>
+<blockquote class="blockquote">
+<p>It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu and Johnson 2003). Data preparation is not just a first step, but must be repeated many times over the course of analysis as new problems come to light or new data is collected.</p>
+</blockquote>
+<p>Luckily, we have done a lot of that work already, and in this class, you won’t be starting from scratch, but let’s look at the labor that comes with cleaning and preparing data from the beginning.</p>
+<p>When you export tags from Transkribus, you get a folder that corresponds to each item, and in that folder, a spreadsheet of tags.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/export-job-screenshot.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of a folder containing 346 folders</figcaption>
+</figure>
+</div>
+<p>These files, individually, do not help us answer our research question! So we have to combine them and clean them in order to see all the senders, recipients, and people mentioned in the letters. Rather than open and inspect each file, copy all of its contents, and paste it into a new file, we are using automated functions in Excel to combine the data before we clean and examine our data. Assuming all the data in these files is uniform (and in several cases, <a href="https://docs.google.com/document/d/1YlNf0DtsnwPP9iQbpitkx7oGRia87Q4ratYDo6BkhYI/edit?usp=sharing">they aren’t!</a>), Excel should combine the sheets into one file, going from this…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/import-data.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of the ‘get data from folder’ function in Excel</figcaption>
+</figure>
+</div>
+<p>…to this…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/combined-tags-screenshot.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of an Excel spreadsheet with combined data from the tags export</figcaption>
+</figure>
+</div>
+<p>After combining these tags, we then add a layer of structure, so that our data will model the question we’re asking: how can we use the letters to get an idea of the people in the Smiths’ network? Using the <a href="https://docs.google.com/spreadsheets/d/1kB8T4NGGUat5enGtTouvO4K0SxhQAVLU/edit?usp=sharing&amp;ouid=108103280018141344202&amp;rtpof=true&amp;sd=true">combined tags sheet</a>, we created the <a href="https://docs.google.com/spreadsheets/d/1pXrEV-Ny5WzDHgn2fyZhbSbetRR8oQGh/edit?usp=sharing&amp;ouid=108103280018141344202&amp;rtpof=true&amp;sd=true">structured tags sheet</a>. Now we can start adding newly transcribed tags and cleaning them.</p>
+<p>There are lots of ways to clean a spreadsheet - some complex and some simple. Here the recommended steps you can take in order to get from names and data you tagged in the letters, to structured data that you can put into a network graph software. With each step is a video that shows you how to do it!</p>
+<ol type="1">
+<li>Export the Tags metadata from Transkribus. <a href="https://drive.google.com/file/d/1TbXO2yrcQtWZng4FGCDrHO17T6V22NIq/view">Watch this in a video here.</a> <em>Hint: you have already done this step in the data prep assignment</em></li>
+<li>Copy and past the names of the senders, recipients, and people from your letters to the “combined tags” sheet.</li>
+<li>Open the “structured tags” sheet and add your tags here in the appropriate columns.</li>
+<li>Now it’s time to clean! I recommend doing these steps in a separate sheet, so you don’t accidentally lose any data. Remember: Clean the names <strong>that you can</strong> (<a href="https://drive.google.com/file/d/1oWv-YkLRUZCCWJJBEUw6VZjlUEKtMCJ1/view">Watch this in a video here</a>) by:
+<ul>
+<li>sorting names A-Z, and reconciling names that are extremely similar in spelling (i.e.&nbsp;<code>Bro Breland</code> and <code>Brother Breland</code>) for consistency.</li>
+<li>replacing <em>known</em> names with their authority control names (i.e.&nbsp;“mother” with “Smith, Edith Pauline). We have identified some people by first name and context, and listed them in <a href="https://docs.google.com/spreadsheets/d/1YJeDKaSWJwYFjgCT7rvsQgo52mrRe7ibo9Uqh7BS9qE/edit?usp=sharing">this Google Sheet</a>. You can do this by Find and Replace (<code>ctrl+f</code>), but careful <strong>not to do blanket replacements!</strong> These tend to muck up your data.</li>
+<li>de-duplicating names that appear more than once per letter, so you include only one representation of that person. (To measure our network, we are not including each time a person is mentioned in a letter…just that they are mentioned at all!). To do this, copy the column into another sheet, and click on <code>Remove Duplicates</code> under Data. Paste your de-duplicated list back into the rows associated with that letter, and delete the empty rows.</li>
+</ul></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/tag-cleaning.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">spreadsheet screenshot of similar names, including Bro. Brealand and Bro Breland</figcaption>
+</figure>
+</div>
+<p>If you don’t know the names, that’s ok! Remember, we aren’t trying to erase anyone’s name or presence by assuming who they are or are not(see <a href="http://curatingmenus.org/articles/against-cleaning/">“Against Cleaning”</a> again!). Kate and Katherine might not be the same person. We don’t know! <strong>Embrace the chaos</strong> and keep assumptions to a minimum! This process will take a while and feel repetitive, but remember, that is normal. Give yourself time, and take plenty of breaks.</p>
+<section id="check-in-4" class="level3">
+<h3 class="anchored" data-anchor-id="check-in-4">Check-in</h3>
+<p>Write a detailed list of things that you did to clean up the data you exported. Did you de-duplicate names? Did you make assumptions for similar names? If so, what assumptions did you make? Write these down as precisely as you can so that if someone else were to follow your directions, they’d get similar results.</p>
+<p>Complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78690">3a.Network Analysis Check-in</a> before moving on. For an example of detailing this process, see the <a href="https://docs.google.com/document/d/1YlNf0DtsnwPP9iQbpitkx7oGRia87Q4ratYDo6BkhYI/edit?usp=sharing">tags README file</a>.</p>
+</section>
+</section>
+<section id="software-for-visualizing-a-network-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="software-for-visualizing-a-network-analysis">4. Software for visualizing a network analysis</h2>
+<p>We have prepared our data (it won’t be the last time!), so now it’s time to see what that looks like in a network analysis software’s visualization. There are several different softwares for visualizing a network, and they all serve different purposes. We are going to use <a href="https://hdlab.stanford.edu/palladio/">Palladio</a> because it is free, has a relatively low accessibility bar, will work in your browser, and most importantly, will allow us to use the visualization to answer our questions: What does the network of people in the lives of the Smith family members look like? Where are the connections and who facilitates them?</p>
+<section id="preparing-your-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="preparing-your-visualization">Preparing your visualization</h3>
+<section id="load-your-data" class="level4">
+<h4 class="anchored" data-anchor-id="load-your-data">1. Load your data</h4>
+<p>You can either copy and paste the cells from your spreadsheet (columnn headings included), or you can upload your file as a .csv file - <em>.csv, or comma separated value files are more flexible among different platforms, and is a simpler, less formatted version of tabular (or structured) data.</em></p>
+<p>Palladio will not support an .xlsx file!</p>
+<p>Copying your data will look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/source-target-copy.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot showing how to copy data for use in Palladio</figcaption>
+</figure>
+</div>
+<p>Saving your data to upload will look like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/source-target-csv.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot showing how to save data as .csv for use in Palladio</figcaption>
+</figure>
+</div>
+</section>
+<section id="resolve-flagged-issues-in-palladio" class="level4">
+<h4 class="anchored" data-anchor-id="resolve-flagged-issues-in-palladio">2. Resolve flagged issues in Palladio</h4>
+<p>Palladio flags inconsistencies in data, like the use of special characters or multiple observations in one variable (i.e.&nbsp;more than one value in a cell. Commas are tricky to this program!). Use Palladio’s verification tools, sorting options, and searching option to take another <strong>thorough</strong> look at your data. <!--https://hdlab.stanford.edu/palladio/tutorials/data/--></p>
+<p>Clicking on the little red dots will allow you to verify and look further at your data. <img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/flagged-palladio-data.PNG" class="img-fluid" alt="screenshot showing Palladio’s flagged data issues"></p>
+<p>This is also an opportunity to evaluate if you need to go back and clean the original spreadsheet! For instance, if you are reviewing the issues, and you find that:</p>
+<ul>
+<li>a person’s name recorded in 2 different ways,</li>
+<li>spelling errors, or</li>
+<li>the type of data (i.e.&nbsp;text, number, date, etc.) is displayed incorrectly,</li>
+</ul>
+<p>you want to take this opportunity to clean your data again. This is part of the process!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/network-analysis-lecture-files/palladio-edit-dimension.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot showing sorted data that needs further cleaning</figcaption>
+</figure>
+</div>
+<!--check-in: post before and after? Or detailed worklog of the changes that were made?-->
+</section>
+<section id="choose-which-dimensions-to-visualize" class="level4">
+<h4 class="anchored" data-anchor-id="choose-which-dimensions-to-visualize">3. Choose which dimensions to visualize</h4>
+<p>Once you’ve verified the data and gone back to clean any leftover issues, it’s time to visualize it. (Reality check: this isn’t necessarily the end of cleaning data! A visualization can also make inconsistencies and cleaning issues apparent!). For the question of how to visualize the letter writer and their network of people (the person who received the letter and those mentioned within), click the <code>Graph</code> tab, then choose the following * Source dimension - this is the sender of the letter * Target dimension - these will be both the recipient and the people mentioned</p>
+</section>
+<section id="customize-your-graph" class="level4">
+<h4 class="anchored" data-anchor-id="customize-your-graph">4. Customize your graph</h4>
+<ul>
+<li>Add facets to your data</li>
+<li>Size the nodes according to different dimensions (ours will just have one dimension - number of times they appear).</li>
+<li>Filter what appears in the network (Directed v. Undirected)</li>
+<li>Drag nodes manually to see different connections among the network. Who is connected to whom? Who bridges the network?</li>
+</ul>
+<p><a href="https://drive.google.com/file/d/1KN4oU02u0yg4QVd7XeJhUrS3G6l2W4WM/view">Here is a brief video of what this process looks like.</a></p>
+<p>There are also Palladio’s own Tutorials and FAQs for <a href="http://hdlab.stanford.edu/palladio/tutorials/data/">loading data</a> and <a href="http://hdlab.stanford.edu/palladio/tutorials/graph/">customizing a graph</a>. Both of which are helpful!</p>
+</section>
+</section>
+<section id="check-in-5" class="level3">
+<h3 class="anchored" data-anchor-id="check-in-5">Check-in</h3>
+<p>Eyeball test - what can you start to answer with the image you see? What looks like it needs fixing?</p>
+<p>Complete the last <a href="https://muw.instructure.com/courses/19899/quizzes/78693">4.Network Analysis check-in</a> before turning in the image of your final visualization for this mini-project.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Hillary Richardson">
+
+<title>Intro to Digital Research, LIB 201 - Introduction to Digital Exhibits</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intro to Digital Research, LIB 201</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html" rel="" target="">
+ <span class="menu-text">LIB 201 - Intro to Digital Research</span></a>
+  </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">modules.md</span></li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#writing-for-the-web" id="toc-writing-for-the-web" class="nav-link" data-scroll-target="#writing-for-the-web">1. Writing for the Web</a>
+  <ul class="collapse">
+  <li><a href="#check-in" id="toc-check-in" class="nav-link" data-scroll-target="#check-in">Check-in:</a></li>
+  </ul></li>
+  <li><a href="#markdown" id="toc-markdown" class="nav-link" data-scroll-target="#markdown">2. Markdown</a></li>
+  <li><a href="#common-markdown-elements" id="toc-common-markdown-elements" class="nav-link" data-scroll-target="#common-markdown-elements">Common Markdown elements</a>
+  <ul class="collapse">
+  <li><a href="#headings" id="toc-headings" class="nav-link" data-scroll-target="#headings"><strong>Headings</strong></a></li>
+  <li><a href="#formatting-text" id="toc-formatting-text" class="nav-link" data-scroll-target="#formatting-text"><strong>Formatting Text</strong></a></li>
+  <li><a href="#adding-links-and-images" id="toc-adding-links-and-images" class="nav-link" data-scroll-target="#adding-links-and-images"><strong>Adding links and images</strong></a></li>
+  </ul></li>
+  <li><a href="#designing-and-creating-a-digital-exhibit" id="toc-designing-and-creating-a-digital-exhibit" class="nav-link" data-scroll-target="#designing-and-creating-a-digital-exhibit">3. Designing and creating a digital exhibit</a>
+  <ul class="collapse">
+  <li><a href="#designing-an-exhibit" id="toc-designing-an-exhibit" class="nav-link" data-scroll-target="#designing-an-exhibit">Designing an Exhibit</a></li>
+  <li><a href="#keep-in-mind" id="toc-keep-in-mind" class="nav-link" data-scroll-target="#keep-in-mind">Keep in Mind</a></li>
+  </ul></li>
+  <li><a href="#additional-sections-to-include" id="toc-additional-sections-to-include" class="nav-link" data-scroll-target="#additional-sections-to-include">Additional sections to include</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Digital Exhibits</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Hillary Richardson </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>We have been focusing on “telling the story” of a collection thus far through mini-projects like network analyses, timelines, maps, and textual analyses. Now it is time to use <em>a story</em> to tell the story! Thus, we will create a narrative, online project to weave together the items in the collection - and exhibit the artifacts we’ve created with them - with what we have learned through our prodding, research, and exploration.</p>
+<ul>
+<li>Identify the qualities of an accessible web narrative</li>
+<li>Identify elements that comprise Markdown formatting, and design a simple document with those elements</li>
+<li>Design a digital exhibit with a logical outline and course artifacts</li>
+<li>Create a digital exhibit portfolio that compiles primary sources, secondary sources, and derived artifacts from previous course modules.</li>
+</ul>
+<!--## Lessons
+
+1. [Writing for the Web](#1-writing-for-the-web)
+2. [Markdown](#1-markdown) 
+3. [Creating a narrative project](#3-creating-a-narrative-project)-->
+<!--### Acknowledgements
+- Lewis, Alison M. "Creating Online Exhibits with Omeka," _Library Juice Academy Course_, October 2017.
+- DHRI Curriculum, "Introduction to Git and GitHub." https://curriculum.dhinstitutes.org/workshops/git/ 
+- University of Iowa, "Accessibility 101," Canvas Commons, https://uiowa.instructure.com/courses/40.-->
+<section id="writing-for-the-web" class="level2">
+<h2 class="anchored" data-anchor-id="writing-for-the-web">1. Writing for the Web</h2>
+<p>Web-based narratives are great for sharing a variety of content in an open, public space. Let’s remember some important things when writing for an online environment.</p>
+<ol type="1">
+<li><p><b>Web-based writing should be concise.</b> Say what you’re going to say with simple, direct sentences. This doesn’t mean it has to be short (although that’s preferred), but it does warrant a more economic attitude toward words.</p></li>
+<li><p><b>Web-based writing should be accessible.</b> Web-based writing should strive to be accessible for any and all users, no matter their intellectual levels or physical abilities. In other words, you’re writing for a diverse public, and not a singular or specifically-trained audience. Remember the <strong>POUR</strong> acronym when you’re writing your narrative:</p></li>
+</ol>
+<ul>
+<li><strong>Perceivable</strong> - the user can engage with elements through various senses (primarily sound and sight, or touch for haptic screens). Example: If you include an image, thoroughly describe that image with alternative text. If you include a video, make sure it has captions. The image below contains a good example of thorough alt text:</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/narrative-images/alternative-text.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Screenshot of a letter from “Women’s Stories, W.E.B. Du Bois Papers Data” via https://sway.office.com/jnwIZkrNCACbONhA with alternative text highlighted</figcaption>
+</figure>
+</div>
+<ul>
+<li><p><strong>Operable</strong> - a user can successfully use controls, buttons, navigation, and other interactive elements. For many, this means identifying something visually, and then clicking, tapping, or swiping. For others, using a computer keyboard or voice commands may be the only way they can operate and control the page.</p>
+<p>Look at the differences in navigation between this site’s <a href="https://sway.office.com/jnwIZkrNCACbONhA?accessible=true">accessibility view</a> and it’s <a href="https://sway.office.com/jnwIZkrNCACbONhA">default view</a>.</p></li>
+<li><p><strong>Understandable</strong> - content is consistent in its presentation and format, predictable in its design and organizing patterns, is concise, multimodal, and appropriate to the audience in its voice and tone. Anyone should be able to comprehend the content and use the page with relative ease.</p>
+<p>Example: a website for children that uses complex, higher-level words without defining them is not very accessible. The website would need to introduce these words with pictures and definitions (or uses less complex synonyms).</p></li>
+<li><p><strong>Robust</strong> - Users should be able to choose the technology they use to interact with websites, online documents, multimedia, and other information formats. If something only works in one browser or with a proprietary format, it is not very accessible.</p>
+<p>Example: a website with a plug-in that is outdated or not supported on all devices or browsers isn’t very accessible.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.thewindowsclub.com/wp-content/uploads/2018/06/Broken-image-icon-in-Chrome.gif" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Broken image icon - a page with an invisible line through it</figcaption>
+</figure>
+</div></li>
+</ul>
+<ol start="3" type="1">
+<li><b>Web-based writing should use web elements.</b> Purposefully break up your text with formatting elements (see next section), use hyperlinks where appropriate (to cite, to refer to other content, etc.), and include media to enhance and solidify the meaning of something.</li>
+</ol>
+<section id="check-in" class="level3">
+<h3 class="anchored" data-anchor-id="check-in">Check-in:</h3>
+<p>Check your accesibility comprehension with the <a href="https://muw.instructure.com/courses/19899/quizzes/78701">1.Narrative check-in</a> before moving on to the next section.</p>
+</section>
+</section>
+<section id="markdown" class="level2">
+<h2 class="anchored" data-anchor-id="markdown">2. Markdown</h2>
+<p>Markdown is a very simple markup language (ha! did you catch that pun?!) used for writing for the web. Put simply, Markdown allows us to format our text using simple cues. All of our course lessons are written using Markdown, with some HTML here and there. <!--Click the ```Raw``` button at the top of any lesson's screen to see what this looks like before being translated by your computer! It will show you the text-only version, resembling: ![Markdown file in a text editor with labels showing different kinds of formatting](https://github.com/hillaryAHR/LIB-201/blob/main/narrative-images/markdown-example.JPG)-->Most websites use HTML (Hyper Text Markup Language), another markup language, to structure web documents that use nested labels to tell a browser how you want something displayed. Markdown and HTML work together in many cases, so while we’ll mostly use Markdown, you may see (or even use) some HTML elements while formatting our narrative project.</p>
+</section>
+<section id="common-markdown-elements" class="level2">
+<h2 class="anchored" data-anchor-id="common-markdown-elements">Common Markdown elements</h2>
+<section id="headings" class="level3">
+<h3 class="anchored" data-anchor-id="headings"><strong>Headings</strong></h3>
+<p>Headings are marked with 1) the #, 2) a space, 3) the text, and 4) a hard return.</p>
+<p>In markdown, you would type <code># Heading 1</code>, but the computer would read: &gt; # Heading 1</p>
+<p>Examples of more headings and subheadings: <img src="https://github.com/hillaryAHR/LIB-201/blob/main/narrative-images/markdown-headings.JPG" class="img-fluid" alt="Screenshot of markdown headings from https://www.markdownguide.org/basic-syntax/"></p>
+</section>
+<section id="formatting-text" class="level3">
+<h3 class="anchored" data-anchor-id="formatting-text"><strong>Formatting Text</strong></h3>
+<p>Style your text to create emphasis with: &gt; <code>**bold**</code> –&gt; <strong>bold</strong> or <code>*italics*</code> –&gt; <em>italics</em></p>
+<p>Create an ordered or unordered list:</p>
+<p><code>1. Ordered list item</code></p>
+<p><code>* unordered list item 1</code></p>
+<p><code>- unordered list item 2</code></p>
+<blockquote class="blockquote">
+<ol type="1">
+<li>ordered list item</li>
+</ol>
+<ul>
+<li>unordered list item 1</li>
+<li>unordered list item 2</li>
+</ul>
+</blockquote>
+<p>Highlight quotes with a blockquote:</p>
+<p><code>&gt; Let's highlight this quote</code> turns into &gt; Let’s highlight this quote</p>
+</section>
+<section id="adding-links-and-images" class="level3">
+<h3 class="anchored" data-anchor-id="adding-links-and-images"><strong>Adding links and images</strong></h3>
+<p>You can instantly hyperlink something with angle brackets, like this: &gt; <code>&lt;hyperlinked-URL&gt;</code></p>
+<p>To hyperlink text, put the text in square brackets [], immediately followed by the URL in parentheses. Like this: &gt; <code>[This is the linked text](hyperlink-URL)</code></p>
+<p><em>Alternatively, you can use a bit of HTML to hyperlink text. It is one of the most common and useful bits of code to learn! HTML uses the anchor element and the hypertext reference attribute, or <code>&lt;a href&gt;</code>. A full link would look like this</em>: &gt; <code>&lt;a href="example.linkhere"&gt;Linked text here.&lt;/a&gt;</code></p>
+<p>Inserting an image is similar, but add an exclamation point to the beginning, then include square brackets containing the alt text describing it, and parentheses with the image URL: &gt; <code>![alternative text describing the image](Image URL)</code></p>
+<p>To hyperlink an image, put square brackets around the Markdown for the image, and immediately follow that with the URL in parentheses, like this:</p>
+<blockquote class="blockquote">
+<p><code>[![alternative text](image-url)](hyperlinked-url)</code></p>
+</blockquote>
+<p>For more help with markdown elements, there are free, online cheat sheets, like <a href="https://www.markdownguide.org/basic-syntax/">Markdownguide.org</a>. <strong>Bonus</strong>: You can insert emoji with Markdown by putting the alt text in between two colons, like this: <code>:rofl:</code>. Here’s a full <a href="https://github.com/ikatyang/emoji-cheat-sheet">cheat sheet</a>. Have fun! :wink:</p>
+<!--
+## Common HTML elements
+Hyperlinking text, the most powerful and simple tool of HTML, is the most common way we'll use HTML. To create a hyperlink, use the anchor element (```</a>```) to structure your text like this:
+
+> ```<a href="hyperlinked-URL">Text you are hyperlinking.</a>```
+
+Hyperlinking images looks a little different. To share and link an image in html, nest the image element within the anchor element, like this: 
+
+> ```<a href="hyperlinked-URL"><img src="hyperlinked-URL" alt="insert alt text here" width="" height=""></a>```
+
+The width="" and height="" elements allow the size of the image to be responsive to the screen. In other words, it will be as visible on a mobile device as it will be on a desktop monitor.
+
+For more help using HTML, there are free, online tutorials available through <a href="https://www.w3schools.com/html/html_intro.asp">W3Schools.com</a>
+-->
+<section id="check-in-1" class="level4">
+<h4 class="anchored" data-anchor-id="check-in-1">Check-in</h4>
+<p>Create a markdown file (save it as .md) in your text editor that uses elements above for the <a href="https://muw.instructure.com/courses/19899/quizzes/78695">2.Narrative check-in</a>.</p>
+</section>
+</section>
+</section>
+<section id="designing-and-creating-a-digital-exhibit" class="level2">
+<h2 class="anchored" data-anchor-id="designing-and-creating-a-digital-exhibit">3. Designing and creating a digital exhibit</h2>
+<p>This is the tricky part! We’re going to weave the writing and artifacts we’ve already created into a digital exhibit. Here are some examples to help you think about an end product:</p>
+<ul>
+<li><a href="https://hsuredwoodsproject.omeka.net/">Humboldt Redwoods Project</a> - exhibit highlighting</li>
+<li><a href="https://starkvillecivilrights.msstate.edu/wordpress/">Starkville Civil Rights Project</a></li>
+<li><a href="http://mapping-marronage.rll.lsa.umich.edu/">Mapping Marronage</a></li>
+<li><a href="https://scalar.usc.edu/works/performingarchive/index">Performing Archive: Curtis + “the vanishing race”</a></li>
+<li><a href="https://dashamerikan.scholarslab.org/">DASH Amerikan</a></li>
+</ul>
+<section id="designing-an-exhibit" class="level3">
+<h3 class="anchored" data-anchor-id="designing-an-exhibit">Designing an Exhibit</h3>
+<p>What we are essentially doing through our narrative project is creating an online <em>exhibit</em> using the sources we’ve gathered (both primary and secondary) <em>and</em> the digital artifacts we’ve created in the class. In order to understand the fundamentals of online exhibits, we need to know what goes into the planning and design of one.</p>
+<p>As you think about taking your online audience through a tour of the collection, consider the following:</p>
+<ul>
+<li><b>Who is this audience?</b> - Who are you writing this for? What do you want to say to them and how will you communicate? What is your tone?</li>
+<li><b>What is the purpose of your narrative?</b> Think about the items you have, the ones you want to highlight, and any themes that you want to use to guide your audience through the story. In other words, what is the thesis of this story? What is the central idea of the narrative?</li>
+<li><b>What pieces will you use?</b> We have amassed quite a lot of data over the course of the semester. Think about all you have collected, and how it will help you tell the story you’ve sketched. You may curate anything you’ve created/collected so far, including:
+<ul>
+<li>Letters from the Smith Project</li>
+<li>External primary sources (photographs, etc.)</li>
+<li>Secondary research (book chapters, articles, websites, etc.)</li>
+<li>Metadata (&lt;– You will need this, regardless!)</li>
+<li>Projects you’ve already created</li>
+<li>Text you’ve already written</li>
+</ul></li>
+<li><b>How will you organize your layout?</b> What system are you using to organize your layout? Is it going to be chronological? Will it be organized by topic? This will depend on the story you want to tell, and the artifacts you have to tell it.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/narrative-images/exhibit-layout.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">examples of a chronologically organized and topically organized exhibit</figcaption>
+</figure>
+</div>
+</section>
+<section id="keep-in-mind" class="level3">
+<h3 class="anchored" data-anchor-id="keep-in-mind">Keep in Mind</h3>
+<p>Designing digital exhibits and writing narratives are <strong>recursive</strong> acts, meaning they may be constantly redesigned from the beginning of the project to the end (just like a research paper!). You may not end up with what you started in your outline. Keeping an open mind, being flexible with your plan, and keeping (somewhat) organized notes will help you throughout this process!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/narrative-images/exhibit-outline.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Example of an exhibit outline</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="additional-sections-to-include" class="level2">
+<h2 class="anchored" data-anchor-id="additional-sections-to-include">Additional sections to include</h2>
+<p>In addition to the story you’re telling and the artifacts you’re using, you’ll want to give more context about yourself, the project, AND give your audience options for further exploration. (LIB 201 students will be primarily responsible for collecting and writing this.) Include the following sections in your narrative:</p>
+<ol type="1">
+<li><strong>Home</strong>: This is the first thing your audience will see, so this is where you introduce your project. This is where you will explain the “so what” of the project, or the research question(s) that guided your inquiry, and give any other information that will help your audience decide how to interact with the narrative.</li>
+<li><strong>About</strong>: This includes information about YOU, about the collection you used, why you did the project, and your process. Sometimes, the about section can include navigation or “how to” help, if there are more complex interactive portions or if there are several ways to navigate the page.</li>
+<li><strong>Acknowledgements</strong>: This of this as your works cited page. This will include hyperlinks to the sources you cited, but it can also include links to related archives or projects that gave you inspiration, and it can link to other archives or sources for further research.</li>
+</ol>
+<section id="check-in-2" class="level4">
+<h4 class="anchored" data-anchor-id="check-in-2">Check-in</h4>
+<p>For this check-in, you will need to do some brainstorming. Be ready to: - write the central idea/thesis/purpose statement of your narrative in 1-2 sentences. - Brainstorm a list of the items (letters, metadata, projects, research, etc.) you’d like to focus on - sketch an outline of the narrative itself in 3-5 bullet points</p>
+<p>After you’ve considered these things, complete the <a href="https://muw.instructure.com/courses/19899/discussion_topics/199943">3. Narrative check-in</a>. This is the final check-in! After you complete this sketch, you’ll work toward completing the final narrative portfolio assignment.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

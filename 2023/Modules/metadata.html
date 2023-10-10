@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="LIB 201">
+
+<title>Intro to Digital Research, LIB 201 - Introduction to Metadata</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intro to Digital Research, LIB 201</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modules.html" rel="" target="">
+ <span class="menu-text">Modules</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#what-is-metadata" id="toc-what-is-metadata" class="nav-link" data-scroll-target="#what-is-metadata">1. What is Metadata?</a>
+  <ul class="collapse">
+  <li><a href="#check-in-1" id="toc-check-in-1" class="nav-link" data-scroll-target="#check-in-1">Check-in 1</a></li>
+  </ul></li>
+  <li><a href="#what-are-metadata-standards" id="toc-what-are-metadata-standards" class="nav-link" data-scroll-target="#what-are-metadata-standards">2. What are Metadata Standards?</a></li>
+  <li><a href="#smith-paper-metadata-schema" id="toc-smith-paper-metadata-schema" class="nav-link" data-scroll-target="#smith-paper-metadata-schema">Smith Paper Metadata Schema</a>
+  <ul class="collapse">
+  <li><a href="#check-in-2" id="toc-check-in-2" class="nav-link" data-scroll-target="#check-in-2">Check-in 2</a></li>
+  </ul></li>
+  <li><a href="#smith-paper-metadata-explained" id="toc-smith-paper-metadata-explained" class="nav-link" data-scroll-target="#smith-paper-metadata-explained">3. Smith Paper Metadata Explained</a>
+  <ul class="collapse">
+  <li><a href="#check-in-3" id="toc-check-in-3" class="nav-link" data-scroll-target="#check-in-3">Check-in 3</a></li>
+  </ul></li>
+  <li><a href="#subject-headings" id="toc-subject-headings" class="nav-link" data-scroll-target="#subject-headings">4. Subject Headings</a>
+  <ul class="collapse">
+  <li><a href="#why-subject-headings" id="toc-why-subject-headings" class="nav-link" data-scroll-target="#why-subject-headings">Why subject headings?</a></li>
+  <li><a href="#determining-subject-headings" id="toc-determining-subject-headings" class="nav-link" data-scroll-target="#determining-subject-headings">Determining Subject Headings</a></li>
+  <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations">Ethical considerations</a></li>
+  <li><a href="#check-in" id="toc-check-in" class="nav-link" data-scroll-target="#check-in">Check-in</a></li>
+  </ul></li>
+  <li><a href="#project-and-data-management" id="toc-project-and-data-management" class="nav-link" data-scroll-target="#project-and-data-management">5. Project and Data management</a>
+  <ul class="collapse">
+  <li><a href="#progress" id="toc-progress" class="nav-link" data-scroll-target="#progress">Progress</a></li>
+  </ul></li>
+  <li><a href="#progress-1" id="toc-progress-1" class="nav-link" data-scroll-target="#progress-1">Progress</a>
+  <ul class="collapse">
+  <li><a href="#preservation" id="toc-preservation" class="nav-link" data-scroll-target="#preservation">Preservation</a></li>
+  <li><a href="#communication---sorry-it-doesnt-start-with-a-p" id="toc-communication---sorry-it-doesnt-start-with-a-p" class="nav-link" data-scroll-target="#communication---sorry-it-doesnt-start-with-a-p">Communication - (sorry it doesn’t start with a P!)</a></li>
+  <li><a href="#principles" id="toc-principles" class="nav-link" data-scroll-target="#principles">Principles</a></li>
+  <li><a href="#project-management-plan" id="toc-project-management-plan" class="nav-link" data-scroll-target="#project-management-plan">Project Management Plan</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Introduction to Metadata</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>LIB 201 </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="overview" class="level1" data-background="#005c96">
+<h1 data-background="#005c96">Overview</h1>
+<p>In this lesson, you will: - Understand what metadata are, and why they’re important - Understand the importance of consistency in metadata through metadata standards - Interact with a set of metadata standards - Locate and choose Library of Congress Subject Headings as a type of metadata - Create your own metadata for items in the Smith Papers Collection</p>
+<!--this will automatically be the structure of the lesson outline, right?-->
+<!--## Lessons:
+1. [Metadata: What and Why](#1-metadata-what-and-why) 
+2. [Metadata Standards](#2-metadata-standards)
+3. [Metadata Guidelines for the Smith Papers](#3-metadata-guidelines-for-the-smith-papers)
+4. [Library of Congress Subject Headings](#4-library-of-congress-subject-headings)
+5. [Project and Data Management](#5-project-and-data-management)-->
+<section id="what-is-metadata" class="level2" data-background="#005c96">
+<h2 data-background="#005c96" class="anchored" data-anchor-id="what-is-metadata">1. What is Metadata?</h2>
+<p>Metadata are the building blocks of digital scholarship! We will be creating, structuring, and using metadata throughout this course to participate in digital research and learn more about our collection.</p>
+<p>As you transcribe, tag, and create information (aka data!) about the letters in the Smith Papers Collection, you are essentially creating <em>metadata</em>. Metadata is just structured “data about data,” and it’s something <a href="https://dictionary.archivists.org/entry/metadata.html">archivists and librarians use</a> to describe, preserve, organize, and digitize. Furthermore, metadata makes items in a collection easy to find and discover.Metadata makes the internet work! And for this class, it is one of the building blocks of digital research.</p>
+<p>Each item in the result list above contains several bits of metadata. When you search for something with combinations of keywords, filters, search facets, etc., you are tapping the metadata that someone created in order to return results. This applies to most things in a digital collection. <img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/database-screenshot.PNG?raw=true" class="img-fluid" alt="screenshot of a list of database results for pizza."></p>
+<p>[<img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/database-screenshot.PNG" class="img-fluid" alt="screenshot of a library database search result page">(https://login.libprxy.muw.edu/login?url=https://search.ebscohost.com/login.aspx?direct=true&amp;bquery=pizza&amp;cli0=RV&amp;clv0=Y&amp;type=1&amp;searchMode=And&amp;site=eds-live&amp;scope=site)]</p>
+<p>Think about the following digital items, and imagine what kinds of metadata - explicit or hidden - that you might interact with when you use them. Then think about what kinds of data and metadata (titles, descriptions, links, stylistic attributes, etc.) had to be collected to create each of the results in these collections.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/twitter-feed.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">image of a twitter feed</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/youtube-screenshot.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of the YouTube homepage</figcaption>
+</figure>
+</div>
+<p>Now, think about this as it pertains to a box of letters that have been scanned. In order for someone to digitally interact with these objects, they need metadata.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/smith-letter-example.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of an envelope and a letter from the Ellard-Murphree-Pilgreen Smith letters</figcaption>
+</figure>
+</div>
+<section id="check-in-1" class="level3" data-background="#005c96">
+<h3 data-background="#005c96" class="anchored" data-anchor-id="check-in-1">Check-in 1</h3>
+<p>Complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78694">1.Metadata Check-in</a> before moving to the next section.</p>
+</section>
+</section>
+<section id="what-are-metadata-standards" class="level2" data-background="#005c96">
+<h2 data-background="#005c96" class="anchored" data-anchor-id="what-are-metadata-standards">2. What are Metadata Standards?</h2>
+<p>Similar to citation guidelines (e.g.&nbsp;MLA, APA, Chicago, etc.), digital items use a schema to organize and standardize their formatting. For instance, websites use HTML and CSS to communicate things to browsers, library databases use specific fields to link similar online articles to each other, and so on. This is a way to classify different kinds of metadata, define the information for each kind, and set rules for each kind (e.g.&nbsp;whether or not the field requires certain information or not).</p>
+</section>
+<section id="smith-paper-metadata-schema" class="level2" data-background="#005c96">
+<h2 data-background="#005c96" class="anchored" data-anchor-id="smith-paper-metadata-schema">Smith Paper Metadata Schema</h2>
+<p>For the Smith Papers collection, we are using a common metadata standard/schema called <a href="https://dublincore.org/specifications/dublin-core/dcmi-terms/#type">Dublin Core</a>, which takes its name from Dublin, OH where it was created. It’s used by many libraries and cultural heritage institutions to describe both digital and physical objects. In doing this, we: * give the collection structure * link it to similar items * provide consistency across items within the collection</p>
+<p>In other words, our metadata standards give guidelines for how to treat the 100+ ways to describe something! Think about the different ways you could write your own name, let alone someone else’s you haven’t met!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/metadata-guidelines.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">different ways to write the same name</figcaption>
+</figure>
+</div>
+<p>Open our <a href="https://drive.google.com/file/d/1VWQTiwhEMFcbKQ_ZEUV5GIFLGeSQCDpZ/view?usp=sharing">Smith Paper Metadata Guidelines</a> in another tab, and look at the different field names in the column headings.</p>
+<section id="check-in-2" class="level3" data-background="#005c96">
+<h3 data-background="#005c96" class="anchored" data-anchor-id="check-in-2">Check-in 2</h3>
+<p>Complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78685">2.Metadata Check-in</a> before moving on to the next section.</p>
+</section>
+</section>
+<section id="smith-paper-metadata-explained" class="level2" data-background="#005c96">
+<h2 data-background="#005c96" class="anchored" data-anchor-id="smith-paper-metadata-explained">3. Smith Paper Metadata Explained</h2>
+<p>As you noticed in the <a href="https://drive.google.com/file/d/1VWQTiwhEMFcbKQ_ZEUV5GIFLGeSQCDpZ/view?usp=sharing">guidelines for the Smith Collection</a>, we have a BUNCH of categories (or “fields”) to describe one letter:</p>
+
+<pre><code>&lt;tr&gt;
+    &lt;td&gt;Creator
+    &lt;td&gt;Date
+    &lt;td&gt;Time Period
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Subject
+    &lt;td&gt;Mississippi County
+    &lt;td&gt;Geographic Location
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Resource Type
+    &lt;td&gt;Format
+    &lt;td&gt;Publisher
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Notes
+    &lt;td&gt;Rights
+    &lt;td&gt;Collection
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;Source
+    &lt;td&gt;Digital Repository
+    &lt;td&gt;Date Digital
+&lt;tr&gt;
+    &lt;td&gt;Capture Method
+    &lt;td&gt;Master Image
+    &lt;td&gt;Record created by
+&lt;tr&gt;
+    &lt;td&gt;File name
+&lt;/tr&gt;</code></pre><table>
+<tbody><tr>
+<td>
+Identifier
+</td><td>
+Title
+</td><td>
+Description
+</td></tr>
+
+
+</tbody></table>
+<p>What do all of these mean? Some of these items capture unique information about the specific letter: * Identifier * Title * Description * Creator * Date * Notes * File name</p>
+<p>Some of them capture information that link them to other items in the collection (and potentially outside the collection): * Time Period * Subject * Mississippi County * Geographic Location * Resource Type * Format * Publisher</p>
+<p>And lastly, some of them capture information about the digitization process, in the event that the digital record disappears: * Digital Repository * Date Digital * Capture Method * Master Image * Record created by</p>
+<p><strong>Some of these fields are consistent, and will say one thing, or just be limited to one of select options (e.g.&nbsp;Capture Method, Digital Repository, Resource Type, etc.). And some will require <em>your</em> discretion (e.g.&nbsp;Description, Subject Heading, etc.)</strong></p>
+<section id="check-in-3" class="level3" data-background="#005c96">
+<h3 data-background="#005c96" class="anchored" data-anchor-id="check-in-3">Check-in 3</h3>
+<p>Using <a href="https://drive.google.com/file/d/1o8SgzeV3L25o1e83y_uvMR0yYYOvmKat/view?usp=sharing">this letter</a> and the <a href="https://drive.google.com/file/d/1VWQTiwhEMFcbKQ_ZEUV5GIFLGeSQCDpZ/view?usp=sharing">full guidelines</a>, enter the metadata you’d create for the given fields for the <a href="https://muw.instructure.com/courses/19899/quizzes/78686">3. Metadata check-in</a>before moving on to the next section.</p>
+</section>
+</section>
+<section id="subject-headings" class="level2" data-background="#005c96">
+<h2 data-background="#005c96" class="anchored" data-anchor-id="subject-headings">4. Subject Headings</h2>
+<section id="why-subject-headings" class="level3">
+<h3 class="anchored" data-anchor-id="why-subject-headings">Why subject headings?</h3>
+<p>You’ll notice there are a lot of ways we describe each letter. Whew! So why subject headings? Subject Headings, like metadata standards, use “controlled vocabulary,” meaning you can group things together by category, so they’ll be <a href="https://en.wikipedia.org/wiki/Library_of_Congress_Linked_Data_Service"> linked</a> by topic. For instance, if I used the subject heading “Dating (Social Customs)” – and we do! – all of the letters with that designation can be grouped together. Books in the library are sorted and grouped by these subject headings, so we can explore information on the same topic in one physical location. What kind of books do you think are next to the one below? What kind of books do you think are next to this one?</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/catalog-screenshot.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">image of a book record in the catalog for <em>Ellen S. Woodward: New Deal Advocate for women</em> by Martha Swain, with subject headings highlighted</figcaption>
+</figure>
+</div>
+</section>
+<section id="determining-subject-headings" class="level3" data-background="#005c96">
+<h3 data-background="#005c96" class="anchored" data-anchor-id="determining-subject-headings">Determining Subject Headings</h3>
+<p>There are a number of <a href="https://id.loc.gov/authorities/subjects.html">pre-determined subject headings</a> defined by the Library of Congress, but how do we decide which subject heading to use when we are the ones coming up with them on our own? Subject headings can be confusing because there are so many of them, and just like words, you can use any number of words to describe something! In order to help with this for the Smith Papers collection, we have gathered several subject headings that are common to the collection. So your first step to choosing a subject heading will be to check this list:</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1BO11mkUuw9EiIyzq-UrUX9WgRukj21qW/edit?usp=sharing&amp;ouid=108103280018141344202&amp;rtpof=true&amp;sd=true">Smith Papers Authority headings</a></p>
+<p>If the contents of your letter do not quite go with the suggested headings, then your next step is to look something up with similar topics, and choose a subject heading from there. Here’s what that looks like:</p>
+<ol type="1">
+<li>Go to the <a href="https://mlp.ent.sirsi.net/client/en_US/muw/">MUW Library Online Catalog</a> and search for a book using keywords that describe the topic. We’ll use the example “movies,” since the Smiths often talk about going to see a movie in many of their letters. Type <code>movies</code> in the search box.</li>
+<li>Scroll through the <a href="https://mlp.ent.sirsi.net/client/en_US/muw/search/results?qu=movies&amp;te=&amp;lm=MUWITEMS">results</a>, and find something that is most similar to your concept. Keep it as simple as possible, and go with what seems most prevalent. Note all of the different ways people have categorized movies, and how these terms range in meaning and specificity:
+<ul>
+<li>Film</li>
+<li>Motion pictures</li>
+<li>Film &amp; Video</li>
+<li>Drama</li>
+<li>Comedy</li>
+<li>Cinematography</li>
+</ul></li>
+</ol>
+<p>In this example, <code>Motion pictures</code> is broadly used enough in this list of results, and it captures the meaning that the people in the letters are using, since they are talking about going to a movie theatre to see a motion picture, so we’ll go with that!</p>
+</section>
+<section id="ethical-considerations" class="level3" data-background="#005c96">
+<h3 data-background="#005c96" class="anchored" data-anchor-id="ethical-considerations">Ethical considerations</h3>
+<p>Remember: <em>people</em> create metadata, and even though they have mostly the best intentions, they also have biases, implicit or explicit. Metadata and metadata standards have been created by people with a notably biased frame of reference. This includes subject headings.</p>
+<p>For many years, the Library of Congress classified books on homosexuality under “sexual deviance.” Recently, an undergraduate student at Dartmouth College began a campaign to change the “illegal alien” subject heading to “noncitizen,” resulting in a <a href="https://www.ala.org/aboutala/sites/ala.org.aboutala/files/content/ALA%20CD%2056%20RESOLUTION%20on%20Replacing%20the%20Library%20of%20Congress%20Subject%20Heading%20Illegal%20Aliens%20Without%20Further%20Delay%20Final.pdf">resolution from the American Library Association</a> that has ended its use. Another example is the subject heading <a href="https://mlp.ent.sirsi.net/client/en_US/muw/search/results?qu=Minorities.&amp;lm=MUWITEMS&amp;rt=false%7C%7C%7CSUBJECT%7C%7C%7CSubject">“Minorities” in our catalog</a>. Not only is it not very descriptive, it’s also a loaded term that de-humanizes a group of people.</p>
+<p>Your job in choosing a subject heading is to create a helpful category for users who are interacting with items in a collection. If you came across a folder of photographs labeled “minorities,” what would you expect to find? Even if you didn’t know what was in there, what would be more specific, more helpful, or more appropriate? As you find and create metadata, consider the words you use and the different connotations of their meanings.</p>
+</section>
+<section id="check-in" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="check-in">Check-in</h3>
+<p>Complete the <a href="https://muw.instructure.com/courses/19899/quizzes/78705">4.Metadata check-in</a> before completing the final section.</p>
+</section>
+</section>
+<section id="project-and-data-management" class="level2" data-background="005c96">
+<h2 data-background="005c96" class="anchored" data-anchor-id="project-and-data-management">5. Project and Data management</h2>
+<p>Creating metadata on your own can be a lot of work! <strong>But we are working as a group!</strong> Let’s discuss what we’ll need to do as a group in class, and consider these parts of <strong>project and data management</strong> that are embedded in creating digital scholarship.</p>
+<section id="progress" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="progress">Progress</h3>
+<p>How do you document your progress so someone could pick up where you leave off and won’t duplicate your work? It is important to document your progress for yourself (your future self!), but also for those who are working in the same collection alongside you. What usually works for you (e.g.&nbsp;notes in a journal, putting dates on a folder on your computer, etc.) doesn’t always work for others!</p>
+</section>
+</section>
+<section id="progress-1" class="level2" data-background="005c96">
+<h2 data-background="005c96" class="anchored" data-anchor-id="progress-1">Progress</h2>
+<p>There are lots of ways to keep up with the progress of group projects. Often, a project manager will keep track of progress by checking in with people, going over updated tasks, and reporting progress notes at regular meetings. For keeping up with tasks and due dates, there are several free, online tools, like: - <a href="https://asana.com/">Asana</a> - Google Sheets - <a href="https://trello.com/en-US">Trello</a></p>
+<p>For this class, we will use Asana as a group, and it will be up to you to keep up with your progress as an individual. I can’t recommend note-taking enough!</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/asana-screenshot.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of project management application, asana, showing complete and incomplete tasks</figcaption>
+</figure>
+</div>
+<section id="preservation" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="preservation">Preservation</h3>
+<p>Essentially, we are creating a high-quality digital archival record for a physical item. There’s a lot that goes into that! Consider the following: * How do you preserve access so other people can access them? * How do you preserve the different types and formats of data you’re working with?</p>
+<p>Some data types that will come from our project include: * Non-digital text (handwritten notes, sketches) * Digital texts or digital copies of text (.txt, .pdf, .md, .doc, .otf, .rtf, .tei, etc.) * Data visualizations (.png, .jpg, .svg) * Spreadsheets (e.g.&nbsp;.xlsx, .csv) * Geographic Information Systems (GIS) and spatial data (e.g.&nbsp;.shp, .dbf, .shx, .kml) * Digital copies of images (e.g.&nbsp;.png, .jpeg, .tiff) * Web files (e.g.&nbsp;.html, .css, .md, .yml)</p>
+<p>Other questions to consider: * How and where do you save backup copies? * How do you ensure your work gets credit? * How do you ensure quality control (i.e.&nbsp;consistency in the metadata, image quality, etc.)? * How do you recognize and protect the integrity of a document with potentially harmful or sensitive information in it? * Are we publishing the documents somewhere? Do we have persmission to do that?</p>
+<p>Many projects consider these questions (and more) as a part of a Data Management Plan. If a project is grant funded, sometimes the grant will require a DMP. Here are some examples: * <a href="https://wiki.diglib.org/Project_Plans">Digital Library Federation Sample Plans</a> (Download the .doc file to see the actual plan) * <a href="https://www.icpsr.umich.edu/files/datamanagement/DataManagementPlans-All.pdf">ICSPR Guidelines for Effective Data Management Plans</a> (Pages 1-10)</p>
+</section>
+<section id="communication---sorry-it-doesnt-start-with-a-p" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="communication---sorry-it-doesnt-start-with-a-p">Communication - (sorry it doesn’t start with a P!)</h3>
+<p>You won’t always be working on the collection at the same time, so how do you talk to each other outside of class time? How do you leave messages, and what are the expectations for responding? We will discuss how to do this as a class, and set up a channel for communication.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/hillaryAHR/LIB-201/blob/main/metadata-images/teams-screenshot.JPG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">screenshot of Microsoft Teams, showing a conversation about a the Smith Papers</figcaption>
+</figure>
+</div>
+</section>
+<section id="principles" class="level3" data-background="005c96">
+<h3 data-background="005c96" class="anchored" data-anchor-id="principles">Principles</h3>
+<p>Consider the principals under which you’ll operate as a cohesive group. Many projects are defined at the outset by practices that its members adopt and value as a group. How we collaborate together will be driven by specific values. Consider some values statements from the following projects: - <a href="https://coloredconventions.org/about/principles/">Colored Conventions Project Values Statement</a> - <a href="https://docs.google.com/document/d/1jJKW2_rnns0NAUsn6H0t3vxMiUgoeNvkVj2Bf6uuWZk/edit?usp=sharing">Smith Papers Project and Data Management</a> - <a href="http://www.scottbot.net/HIAL/index.html@p=6336.html%22">“Pledges,” from Scott Weingart’s blog</a></p>
+</section>
+<section id="project-management-plan" class="level3">
+<h3 class="anchored" data-anchor-id="project-management-plan">Project Management Plan</h3>
+<p>Use these 4 sections - Progress, Preservation, Communication, and Principles - to answer <a href="https://muw.instructure.com/courses/19899/quizzes/78706">the questions in the Data and Project Management Plan</a> in Canvas to complete the metadata module. <!--For an example of our existing Project and Data Management plan, see https://docs.google.com/document/d/1d45FDLsrycW5NH5WUWdToStkvSNz7R-3EV50Y-fgKMU/edit?usp=sharing--></p>
+<!--section on project pitch?-->
+<!--workflow worksheet?-->
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -1,0 +1,23 @@
+project:
+  type: website
+
+website:
+  title: "Intro to Digital Research, LIB 201"
+  navbar:
+  # each menu option listed with href and text #
+    left:
+      - href: index.md
+        text: Home
+      - href: schedule.md
+      - href: modules.md
+
+
+format:
+  html:
+    theme: cosmo
+    # select themes from https://quarto.org/docs/output-formats/html-themes.html #
+    css: styles.css
+    toc: true
+
+
+
