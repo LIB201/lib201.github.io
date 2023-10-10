@@ -1,6 +1,6 @@
 ---
 title: "Digital Prep Rubric"
-author: 
+author: Hillary Richardson
 format:
  html:
   toc: true 
